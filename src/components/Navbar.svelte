@@ -1,19 +1,26 @@
 <script>
-    import { onMount } from "svelte";
     import { page } from '../store.js';
     let current_page
-    page.subscribe(value => {
+    let isMobileMenu = false
+    let menuHeight = "0"
+    const toggleMenu = ()=>{
+        if(isMobileMenu){
+            menuHeight = "0"
+        }
+        else{
+            menuHeight = "40"
+        }
+        isMobileMenu= !isMobileMenu
+    }
+        page.subscribe(value => {
             current_page = value;
         });
-        onMount(()=>{
-            page.update(n => "portfolio")
-        })
     const routes = [
         {name:"Accueil",href:"/"},
         {name:"Portfolio",href:"/portfolio"},
        {name:"A propos", href:"/a-propos"} 
     ]
-
+    
 </script>
 
 <header class="flex lg:justify-between justify-center items-center bg-turquoise text-white px-10 py-6">
@@ -23,25 +30,34 @@
         {#each routes as route}
             <li class="flex items-center">
                 {#if route.href == `/${current_page}`}
-                  <a class="selected" href="{route.href}">{route.name}</a>
+                  <a class="menu-item menu-item-selected" href="{route.href}">{route.name}</a>
                 
                 {:else}
-                    <a class="" href="{route.href}">{route.name}</a>
+                    <a class="menu-item" href="{route.href}">{route.name}</a>
                 {/if}
             </li>
         {/each}
     </ul>
-    <div class="block lg:hidden">
-        X
+    <div class="block lg:hidden cursor-pointer">
+        <p on:click={toggleMenu}>X</p>
     </div>
 </nav>
 </header>
 
+
+<div id="mobile-menu" class="bg-turquoise text-white pl-10 block lg:hidden overflow-hidden hover:h-20 transition-height duration-500 ease-in-out h-{menuHeight}">
+    <ul>
+        {#each routes as route}
+            <li class="py-2">
+                <a on:click={toggleMenu} class="text-lg" href="{route.href}">{route.name}</a>
+            </li>
+        {/each}
+    </ul>
+</div>
+
 <style>
-    .selected::after{
-        width: 100%;
-    }
-    a::after{
+   
+    .menu-item::after{
         content:'';
         background:white;
         height: 2px;
@@ -50,8 +66,13 @@
         margin-top:5px;
         transition: width 0.3s;
         width:0%;
+
+        margin-left:-10%;
     }
-    a:hover::after{
-        width: 100%;
+    .menu-item:hover::after{
+        width: 120%;
+    }
+    .menu-item-selected::after{
+        width: 120%;
     }
 </style>

@@ -4,7 +4,9 @@ const config = {
 		"./src/**/*.{html,js,svelte,ts}",
 	],
 	theme: {
-		extend: {},
+		extend: {transitionProperty: {
+			'height': 'height'
+		  }},
 		colors:{
 			turquoise:{
 				DEFAULT: "#78E4CA"
