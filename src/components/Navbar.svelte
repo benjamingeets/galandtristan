@@ -4,12 +4,6 @@
     let isMobileMenu = false
     let menuHeight = "0"
     const toggleMenu = ()=>{
-        if(isMobileMenu){
-            menuHeight = "0"
-        }
-        else{
-            menuHeight = "40"
-        }
         isMobileMenu= !isMobileMenu
     }
         page.subscribe(value => {
@@ -21,6 +15,8 @@
        {name:"A propos", href:"/a-propos"} 
     ]
     
+	import { blur } from 'svelte/transition';
+
 </script>
 
 <header class="flex lg:justify-between justify-center items-center bg-turquoise text-white px-10 py-6">
@@ -44,8 +40,9 @@
 </nav>
 </header>
 
-
-<div id="mobile-menu" class="bg-turquoise text-white pl-10 block lg:hidden overflow-hidden hover:h-20 transition-height duration-500 ease-in-out h-{menuHeight}">
+<div class="bg-turquoise">
+    {#if isMobileMenu}
+<div  transition:blur="{{duration: 300}}" id="mobile-menu" class="bg-turquoise text-white pl-10 block lg:hidden overflow-hidden">
     <ul>
         {#each routes as route}
             <li class="py-2">
@@ -54,7 +51,8 @@
         {/each}
     </ul>
 </div>
-
+{/if}
+</div>
 <style>
    
     .menu-item::after{
