@@ -11,7 +11,7 @@ const socials = [
 const year = new Date()
 </script>
 
-<footer class="bg-turquoise mt-10 w-full h-36 flex justify-center flex-col items-center">
+<footer class="bg-turquoise mt-16 w-full h-36 flex justify-center flex-col items-center">
     <div>
         <ul>
             <Social/>
