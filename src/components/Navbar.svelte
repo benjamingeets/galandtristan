@@ -1,5 +1,6 @@
 <script>
     import { page } from '../store.js';
+    import Hamburger from '../components/icons/Hamburger.svelte'
     let current_page
     let isMobileMenu = false
     let menuHeight = "0"
@@ -35,15 +36,16 @@
         {/each}
     </ul>
     <div class="block lg:hidden cursor-pointer">
-        <p on:click={toggleMenu}>X</p>
+        <p on:click={toggleMenu}>
+            <Hamburger open={isMobileMenu}/>
+        </p>
     </div>
 </nav>
 </header>
 
-<div class="bg-turquoise">
     {#if isMobileMenu}
-<div  transition:blur="{{duration: 300}}" id="mobile-menu" class="bg-turquoise text-white pl-10 block lg:hidden overflow-hidden">
-    <ul>
+<div transition:blur="{{duration: 300}}" id="mobile-menu" class="bg-turquoise shadow-md absolute w-full text-white pl-10 block lg:hidden overflow-hidden rounded-b-lg">
+    <ul class="mb-10">
         {#each routes as route}
             <li class="py-2">
                 <a on:click={toggleMenu} class="text-lg" href="{route.href}">{route.name}</a>
@@ -52,7 +54,6 @@
     </ul>
 </div>
 {/if}
-</div>
 <style>
    
     .menu-item::after{
