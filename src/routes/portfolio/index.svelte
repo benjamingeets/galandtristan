@@ -10,4 +10,3 @@ import Footer from "../../components/Footer.svelte"
 <svelte:head>
     <title>Portfolio // Galand Tristan</title>
 </svelte:head>
-<Footer/>
