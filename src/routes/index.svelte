@@ -23,7 +23,7 @@ onMount(()=>{page.update(n => "")})//Update the store value to change CSS in nav
                 </div>
             </div>
         </section>
-        <div class="-mb-14 lg:mt-0 lg:-mb-28 mt-20 lg:w-7/12 w-12/12">
+        <div class="-mb-14 lg:mt-0 lg:-mb-28 mt-20 lg:w-7/12 w-full">
             <Tristan />
         </div>
     </main>
