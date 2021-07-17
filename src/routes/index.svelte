@@ -4,6 +4,7 @@ import { page } from '../store';
 import Tristan from '../images/Tristan.svelte'
 import Button from "../components/Button.svelte";
 import Social from "../components/Social.svelte";
+
 onMount(()=>{page.update(n => "")})//Update the store value to change CSS in navbar
 </script>
 
@@ -16,8 +17,8 @@ onMount(()=>{page.update(n => "")})//Update the store value to change CSS in nav
         <section class="flex flex-col items-start justify-center lg:w-5/12 w-12/12">
             <h2 class="text-7xl lg:block hidden custom-font">Galand Tristan</h2>
             <p class="mr-20 text-2xl my-6">Je m’appelle Galand Tristan. Je suis étudiant en e-business et passionné par le graphisme et le Web design. </p>
-            <div class="flex items-center">
-                <Button href="/portfolio" color="white">Mon travail</Button>
+            <div class="flex items-center mb-6">
+                <Button href="/portfolio" >Mon travail</Button>
                 <div class="lg:block hidden">
                     <Social/>
                 </div>
