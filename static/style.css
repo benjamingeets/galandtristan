@@ -13,3 +13,24 @@ body{
 img{
     border-radius: 5px;
 }
+
+
+/* Gestion du markdown */
+article p{
+    margin: 10px 0;
+}
+article p img{
+    width: 100%;
+    margin:10px 0;
+}
+article iframe{
+    max-width: 100% ;
+    margin:auto;
+}
+article p a{
+    color:#78E4CA;
+}
+article h2{
+    font-size:2em;
+    margin: 20px 0px;
+}
