@@ -9,3 +9,7 @@ body{
 .custom-font{
     font-family: "Barlow-Regular";
 }
+
+img{
+    border-radius: 5px;
+}
