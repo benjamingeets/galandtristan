@@ -1,6 +1,8 @@
 <script context="module">
-
   import marked from "marked"
+  import Button from "../../components/global/Button.svelte";
+  import { onMount } from "svelte";
+  import { page } from '../../store';
   marked.setOptions({
     baseUrl:"https://api.galandtristan.be"
   })
@@ -18,9 +20,8 @@
   </script>
 
 <script>
-import Button from "../../components/Button.svelte";
-import { onMount } from "svelte";
-import { page } from '../../store';
+import Head from "../../components/Head.svelte"
+
 export let res
 const projet = res[0]
 const titre = projet.titre
@@ -31,9 +32,7 @@ onMount(()=>{
 const description = marked(res[0].description);
 </script>
 
-<svelte:head>
-    <title>{titre} // Galand Tristan</title>
-</svelte:head>
+<Head title="{titre}" description="{projet.meta_description}" image="https://api.galandtristan.be{projet.image.url}"/>
 
 <article class="max-w-screen-md mx-auto mt-2 px-4">
   {#if projet.figma != null}

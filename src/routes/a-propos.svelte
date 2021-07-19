@@ -1,16 +1,15 @@
 <script>
 import { onMount } from "svelte";
 import { page } from '../store';
-import Social from "../components/Social.svelte";
-import Button from "../components/Button.svelte";
+import Social from "../components/global/Social.svelte";
+import Button from "../components/global/Button.svelte";
+import Head from "../components/Head.svelte"
     onMount(()=>{
         page.update(n => "a-propos")
     })
 </script>
 
-<svelte:head>
-    <title>A propos // Galand Tristan</title>
-</svelte:head>
+<Head title="A propos // Galand Tristan"/>
 
 <section class="max-w-screen-xl mx-auto px-4">
     <h1 class="text-4xl custom-font text-center my-10">A propos</h1>

@@ -1,17 +1,16 @@
 <script>
 import { onMount } from "svelte";
 import { page } from '../store';
-import Tristan from '../images/Tristan.svelte'
-import Button from "../components/Button.svelte";
-import Social from "../components/Social.svelte";
+import Tristan from '../components/images/Tristan.svelte'
+import Button from "../components/global/Button.svelte";
+import Social from "../components/global/Social.svelte";
+import Head from "../components/Head.svelte";
 
 onMount(()=>{page.update(n => "")})//Update the store value to change CSS in navbar
 </script>
 
-<svelte:head>
-    <title>Galand Tristan // Web design, Infographie,... // Tournai (Belgique)</title>
-</svelte:head>
 
+<Head/>
 <div class="bg-turquoise">
     <main class="text-white flex max-w-screen-xl px-4 mx-auto flex-wrap pt-20">
         <section class="flex flex-col items-start justify-center lg:w-5/12 w-12/12">

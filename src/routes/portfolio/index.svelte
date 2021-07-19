@@ -1,7 +1,7 @@
 <script context="module">
-export const load = async ({fetch}) =>{
-        const res = await fetch ("/api")
-        const data = await res.json()
+    export const load = async ({fetch}) =>{
+    const res = await fetch ("/api")
+    const data = await res.json()
 
         return {
             props:{
@@ -14,6 +14,7 @@ export const load = async ({fetch}) =>{
 
 <script>
     import PortfolioThumbnail from "../../components/PortfolioThumbnail.svelte";
+    import Head from "../../components/Head.svelte"
     import { onMount } from "svelte";
     import { page } from '../../store';
     import ExternalIcon from "../../components/icons/ExternalIcon.svelte";
@@ -45,9 +46,7 @@ export const load = async ({fetch}) =>{
     }
     </script>
 
-<svelte:head>
-    <title>Portfolio // Galand Tristan</title>
-</svelte:head>
+<Head title="Portfolio // Galand Tristan"/>
 
 <!-- Sélection desktop -->
 <div class="max-w-screen-xl hidden md:block mx-auto my-16">

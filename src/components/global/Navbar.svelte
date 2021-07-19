@@ -1,6 +1,6 @@
 <script>
-    import { page } from '../store.js';
-    import Hamburger from '../components/icons/Hamburger.svelte'
+    import { page } from '../../store.js';
+    import Hamburger from '../../components/icons/Hamburger.svelte'
     let current_page
     let isMobileMenu = false
     const toggleMenu = ()=>{

@@ -1,9 +1,9 @@
 <script>
     export let color = "white"
-    import Instagram from "./icons/Instagram.svelte"
-    import Linkedin from "./icons/Linkedin.svelte"
-    import Youtube from "./icons/Youtube.svelte"
-    import Mail from "./icons/Mail.svelte"
+    import Instagram from "../icons/Instagram.svelte"
+    import Linkedin from "../icons/Linkedin.svelte"
+    import Youtube from "../icons/Youtube.svelte"
+    import Mail from "../icons/Mail.svelte"
 </script>
 
 <div class="flex">

@@ -1,7 +1,7 @@
 <script>
-import Footer from "../components/Footer.svelte";
+import Footer from "../components/global/Footer.svelte";
 import "../app.postcss";
-import Navbar from "../components/Navbar.svelte"
+import Navbar from "../components/global/Navbar.svelte"
 </script>
 <div class="flex flex-col justify-between min-h-screen">
     <div>
