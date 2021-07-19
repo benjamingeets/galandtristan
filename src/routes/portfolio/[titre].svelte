@@ -38,6 +38,7 @@ const description = marked(res[0].description);
 <article class="max-w-screen-md mx-auto mt-2 px-4">
   {#if projet.figma != null}
   <iframe
+  title={projet.titre}
   height="450"
   width="800"
   src="https://www.figma.com/embed?embed_host=astra&url={projet.figma}"
