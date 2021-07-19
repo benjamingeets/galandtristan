@@ -3,7 +3,6 @@
     import Hamburger from '../components/icons/Hamburger.svelte'
     let current_page
     let isMobileMenu = false
-    let menuHeight = "0"
     const toggleMenu = ()=>{
         isMobileMenu= !isMobileMenu
     }
