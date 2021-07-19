@@ -18,5 +18,7 @@
 		"tailwindcss": "^2.2.4"
 	},
 	"type": "module",
-	"dependencies": {}
+	"dependencies": {
+		"marked": "^2.1.3"
+	}
 }
