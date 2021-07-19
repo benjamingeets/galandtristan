@@ -16,7 +16,7 @@ onMount(()=>{page.update(n => "")})//Update the store value to change CSS in nav
     <main class="text-white flex max-w-screen-xl px-4 mx-auto flex-wrap pt-20">
         <section class="flex flex-col items-start justify-center lg:w-5/12 w-12/12">
             <h2 class="text-7xl lg:block hidden custom-font">Galand Tristan</h2>
-            <p class="mr-20 text-2xl my-6">Je m’appelle Galand Tristan. Je suis étudiant en e-business et passionné par le graphisme et le Web design. </p>
+            <p class="lg:mr-20 md:mr-10 mr-0 text-2xl my-6">Je m’appelle Galand Tristan. Je suis étudiant en e-business et passionné par le graphisme et le Web design. </p>
             <div class="flex items-center mb-6">
                 <Button href="/portfolio" >Mon travail</Button>
                 <div class="lg:block hidden">
