@@ -1,13 +1,6 @@
 <script>
-import { getStores } from "$app/stores";
-
 import Social from "./Social.svelte"
-const socials = [
-    {icon:"linkedin",url:"https://linkedin.com/in/galandtristan"},
-    {icon:"youtube",url:"https://youtube.com"},
-    {icon:"insta",url:"https://instagram.com/galandtristan.graphisme"},
-    {icon:"mail", url:"mailto:galandtristan@gmail.com"}
-]
+
 const year = new Date()
 </script>
 
@@ -17,5 +10,5 @@ const year = new Date()
             <Social/>
         </ul>
     </div>
-    <p class="text-white">galandtristan.be © {year.getFullYear()} // <a href="https://geets.dev">{"<geets.dev/>"}</a></p>
+    <p class="text-white">galandtristan.be © {year.getFullYear()} // <a target="_blank" href="https://geets.dev">{"<geets.dev/>"}</a></p>
 </footer>
