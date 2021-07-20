@@ -2,7 +2,7 @@
     export let colorIcon
 </script>
 
-<a target="_blank" class="mx-2" href="https://linkedin.com/in/galandtristan">
+<a target="_blank" class="mx-4" href="https://linkedin.com/in/galandtristan">
     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M25.1597 25.1648H25.1646V15.9344C25.1646 11.4175 24.1914 7.94263 18.9127 7.94263C16.3766 7.94263 14.6711 9.33357 13.9781 10.6557H13.9043V8.36532H8.90088V25.1648H14.1108V16.8437C14.1108 14.6516 14.5236 12.5332 17.2367 12.5332C19.9105 12.5332 19.9498 15.035 19.9498 16.9813V25.1648H25.1597Z" fill="{colorIcon}"/>
         <path d="M0.413086 8.36536H5.63281V25.1648H0.413086V8.36536Z" fill="{colorIcon}"/>

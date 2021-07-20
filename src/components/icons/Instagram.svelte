@@ -2,7 +2,7 @@
     export let colorIcon
 </script>
 
-<a target="_blank" class="mx-2" href="https://instagram.com/galandtristan.graphisme">
+<a target="_blank" class="mx-4" href="https://instagram.com/galandtristan.graphisme">
 
     <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.7623 6.12341C10.1004 6.12341 7.13574 9.01708 7.13574 12.5843C7.13574 16.1547 10.1036 19.0453 13.7623 19.0453C17.4243 19.0453 20.3889 16.1516 20.3889 12.5843C20.3889 9.01394 17.421 6.12341 13.7623 6.12341ZM13.7623 16.778C11.3852 16.778 9.46118 14.9009 9.46118 12.5843C9.46118 10.2677 11.3863 8.39072 13.7623 8.39072C16.1383 8.39072 18.0635 10.2677 18.0635 12.5843C18.0645 14.9009 16.1394 16.778 13.7623 16.778Z" fill="{colorIcon}"/>
