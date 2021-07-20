@@ -24,7 +24,7 @@ import Head from "../components/Head.svelte"
                 En ce qui concerne le graphisme, j’ai un <a class="text-turquoise" target="_blank" href="https://instagram.com/galandtristan.graphisme">compte Intagram dédié</a>, n’hésitez pas à aller jeter un coup d’œil. 
             </p>
             <div class="flex items-center mt-4">
-                <Button target="_blank" href="https://cv.geets.dev">Mon CV</Button>
+                <Button target="_blank" href="/CV_Galand_Tristan.pdf">Mon CV</Button>
                 <Social color="#78E4CA"/>
             </div>
         </div>
