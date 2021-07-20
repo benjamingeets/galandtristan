@@ -32,7 +32,7 @@ onMount(()=>{
 const description = marked(res[0].description);
 </script>
 
-<Head title="{titre}" description="{projet.meta_description}" image="https://api.galandtristan.be{projet.image.url}"/>
+<Head title="{titre} // Galand Tristan" description="{projet.meta_description}" image="https://api.galandtristan.be{projet.image.url}"/>
 
 <article class="max-w-screen-md mx-auto mt-2 px-4">
   {#if projet.figma != null}
