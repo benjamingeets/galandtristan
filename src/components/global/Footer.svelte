@@ -10,5 +10,5 @@ const year = new Date()
             <Social/>
         </ul>
     </div>
-    <p class="text-white">galandtristan.be © {year.getFullYear()} // <a target="_blank" href="https://geets.dev">{"<geets.dev/>"}</a></p>
+    <p class="text-white mt-4">galandtristan.be © {year.getFullYear()} // <a target="_blank" href="https://geets.dev">{"<geets.dev/>"}</a></p>
 </footer>
