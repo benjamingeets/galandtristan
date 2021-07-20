@@ -18,7 +18,7 @@ onMount(()=>{page.update(n => "")})//Update the store value to change CSS in nav
             <p class="lg:mr-20 md:mr-10 mr-0 text-2xl my-6">Je m’appelle Galand Tristan. Je suis étudiant en e-business et passionné par le graphisme et le Web design. </p>
             <div class="flex items-center mb-6">
                 <Button href="/portfolio" >Mon travail</Button>
-                <div class="lg:block hidden">
+                <div class="lg:block hidden ml-2">
                     <Social/>
                 </div>
             </div>
