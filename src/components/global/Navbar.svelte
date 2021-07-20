@@ -20,7 +20,7 @@
 </script>
 
 <header class="flex lg:justify-between justify-center items-center bg-turquoise text-white px-10 py-6">
-<h1 class="text-2xl custom-font"><a href=".">Galand Tristan</a></h1>
+<h1 class="text-2xl custom-font"><a href="/">Galand Tristan</a></h1>
 <nav class="lg:w-5/12 absolute right-10">
     <ul class="justify-evenly mt-2 lg:flex hidden">
         {#each routes as route}
