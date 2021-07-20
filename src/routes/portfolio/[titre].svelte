@@ -40,7 +40,8 @@ const description = marked(res[0].description);
   title={projet.titre}
   height="450"
   width="800"
-  src="https://www.figma.com/embed?embed_host=astra&url={projet.figma}"
+  style="max-width: 100%;"
+  src="https://www.figma.com/embed?embed_host=galandtristan&url={projet.figma}"
   allowfullscreen
 />
   {/if}

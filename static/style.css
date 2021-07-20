@@ -30,7 +30,11 @@ article iframe{
 article p a{
     color:#78E4CA;
 }
-article h2{
+article h1{
     font-size:2em;
     margin: 20px 0px;
+}
+article h2{
+    font-size:1.7em;
+    margin: 15px 0;
 }
