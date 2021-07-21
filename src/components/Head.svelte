@@ -19,7 +19,9 @@
     property="og:description"
     content={description}
   />
+  <meta name="author" content="Galand Tristan">
   <meta
+    name="image"
     property="og:image"
     content={image}
   />
