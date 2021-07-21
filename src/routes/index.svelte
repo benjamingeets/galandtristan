@@ -1,5 +1,3 @@
-<script context="module">export const prerender = true;</script>
-
 <script>
 import { onMount } from "svelte";
 import { page } from '../store';
