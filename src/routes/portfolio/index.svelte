@@ -27,8 +27,8 @@
     const categories = data.categories
     let selector =""
     let projetsToDisplay = projets
-    let currentCategorie = "tout"
-    const setProjets = (cat)=>{
+    let currentCategorie = "Web design"
+    /*const setProjets = (cat)=>{
         projetsToDisplay = []
         currentCategorie = cat
         if(cat == "tout"){
@@ -42,8 +42,7 @@
             })
         })
         }
-        console.log(projetsToDisplay)
-    }
+    }*/
     </script>
 
 <Head title="Portfolio // Galand Tristan" lien="portfolio"/>
@@ -51,17 +50,17 @@
 <!-- Sélection desktop -->
 <div class="max-w-screen-xl hidden md:block mx-auto my-16">
     <p class="text-center">
-        {#if currentCategorie == "tout"}
+      <!--  {#if currentCategorie == "tout"}
          <span class="mx-4 cursor-pointer cat-selected" on:click={()=>{setProjets("tout")}}>Tout</span>
         {:else}
           <span class="mx-4 cursor-pointer" on:click={()=>{setProjets("tout")}}>Tout</span>
-        {/if}
+        {/if} -->
 
         {#each categories as categorie}
             {#if currentCategorie == categorie.nom}
-               <span class="mx-4 cursor-pointer cat-selected" on:click={()=>{setProjets(categorie.nom)}}>{categorie.nom}</span>
+               <span class="mx-4 cursor-pointer cat-selected">{categorie.nom}</span>
             {:else}
-             <span class="mx-4 cursor-pointer" on:click={()=>{setProjets(categorie.nom)}}>{categorie.nom}</span>
+             <span class="mx-4 cursor-pointer">{categorie.nom}</span>
             {/if}
         {/each}
 
@@ -69,10 +68,10 @@
     </p>
 </div>
 
-<!-- Sélection mobile -->
+<!-- Sélection mobile 
 
 <div class="mx-4 md:hidden my-20">
-    <!-- svelte-ignore a11y-no-onchange -->
+    
     <select bind:value={selector} on:change={setProjets(selector)} class="w-full border-2 border-turquoise rounded-md mx-auto block h-16" name="" id="">
         <option value="tout">Tout</option>
         {#each categories as categorie}
@@ -80,11 +79,11 @@
         {/each}
     </select>
 </div>
-
+-->
 <!-- Affichage -->
 
 <div class="flex flex-wrap max-w-screen-xl mx-auto mt-2">
-    {#each projetsToDisplay as projet}
+    {#each projets as projet}
      <PortfolioThumbnail titre="{projet.titre}" link="/portfolio/{projet.slug}" image="https://api.galandtristan.be{projet.image.url}"/>
     {/each}
 </div>
