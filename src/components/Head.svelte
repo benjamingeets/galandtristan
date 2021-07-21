@@ -2,6 +2,7 @@
     export let title = "Galand Tristan // Web design, infographie,... // Tournai (Belgique)"
     export let description = "Je m’appelle Galand Tristan, Je suis étudiant en e-business et passionné par le graphisme et le Web design."
     export let image = "https://galandtristan.be/share.png"
+    export let lien = ""
 </script>
 
 <svelte:head>
@@ -10,6 +11,7 @@
     name="description"
     content={description}
   />
+  <link rel="canonical" href="https://galandtristan.be/{lien}">
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://galandtristan.be/" />
   <meta property="og:title" content={title} />

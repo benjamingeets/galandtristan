@@ -46,7 +46,7 @@
     }
     </script>
 
-<Head title="Portfolio // Galand Tristan"/>
+<Head title="Portfolio // Galand Tristan" lien="portfolio"/>
 
 <!-- Sélection desktop -->
 <div class="max-w-screen-xl hidden md:block mx-auto my-16">

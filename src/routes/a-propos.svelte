@@ -11,7 +11,7 @@ import Head from "../components/Head.svelte"
     })
 </script>
 
-<Head title="A propos // Galand Tristan"/>
+<Head title="A propos // Galand Tristan" lien="a-propos"/>
 
 <section class="max-w-screen-xl mx-auto px-4">
     <h1 class="text-4xl custom-font text-center my-10">A propos</h1>
