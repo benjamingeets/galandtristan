@@ -48,7 +48,7 @@ const description = marked(res[0].description);
   {/if}
   {#if projet.mockup != null}
     <div class="md:hidden block">
-      <img src="https://api.galandtristan.be{projet.mockup.url}" alt="{titre}">
+      <img loading="lazy" src="https://api.galandtristan.be{projet.mockup.url}" alt="{titre}">
     </div>
   {/if}
     {@html description}
