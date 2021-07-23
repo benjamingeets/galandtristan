@@ -3,8 +3,14 @@
   import Button from "../../components/global/Button.svelte";
   import { onMount } from "svelte";
   import { page } from '../../store';
+  const renderer = new marked.Renderer();
+renderer.link = function(href, title, text) {
+    const link = marked.Renderer.prototype.link.call(this, href, title, text);
+    return link.replace("<a","<a target='_blank' ");
+};
   marked.setOptions({
-    baseUrl:"https://api.galandtristan.be"
+    baseUrl:"https://api.galandtristan.be",
+    renderer: renderer
   })
   export const load = async (context) => {
     const slug = context.page.params.titre
@@ -29,6 +35,9 @@ onMount(()=>{
   page.update(n => "portfolio") 
 
 })
+
+
+
 const description = marked(res[0].description);
 </script>
 
