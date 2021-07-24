@@ -4,10 +4,10 @@
   import { onMount } from "svelte";
   import { page } from '../../store';
   const renderer = new marked.Renderer();
-renderer.link = function(href, title, text) {
-    const link = marked.Renderer.prototype.link.call(this, href, title, text);
-    return link.replace("<a","<a target='_blank' ");
-};
+  renderer.link = function(href, title, text) {
+      const link = marked.Renderer.prototype.link.call(this, href, title, text);
+      return link.replace("<a","<a target='_blank' ");
+  };
   marked.setOptions({
     baseUrl:"https://api.galandtristan.be",
     renderer: renderer
@@ -22,23 +22,17 @@ renderer.link = function(href, title, text) {
       }
     }
   }
-  
   </script>
 
 <script>
-import Head from "../../components/Head.svelte"
-
-export let res
-const projet = res[0]
-const titre = projet.titre
-onMount(()=>{
-  page.update(n => "portfolio") 
-
-})
-
-
-
-const description = marked(res[0].description);
+  import Head from "../../components/Head.svelte"
+  export let res
+  const projet = res[0]
+  const titre = projet.titre
+  onMount(()=>{
+    page.update(n => "portfolio") 
+  })
+  const description = marked(res[0].description);
 </script>
 
 <Head title="{titre} // Galand Tristan" lien="portfolio/{projet.slug}" description="{projet.meta_description}" image="https://api.galandtristan.be{projet.image.url}"/>
@@ -46,14 +40,14 @@ const description = marked(res[0].description);
 <article class="max-w-screen-md mx-auto mt-2 px-4">
   {#if projet.figma != null}
   <iframe
-  class="md:block hidden"
-  title={projet.titre}
-  height="450"
-  width="800"
-  style="max-width: 100%;"
-  src="https://www.figma.com/embed?embed_host=galandtristan&url={projet.figma}"
-  allowfullscreen
-/>
+    class="md:block hidden"
+    title={projet.titre}
+    height="450"
+    width="800"
+    style="max-width: 100%;"
+    src="https://www.figma.com/embed?embed_host=galandtristan&url={projet.figma}"
+    allowfullscreen
+  />
   {/if}
   {#if projet.mockup != null}
     <div class="md:hidden block">
