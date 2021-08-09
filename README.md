@@ -1,38 +1,11 @@
-# create-svelte
+# Galandtristan.be
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+J'avais déjà développé une V1 de ce site pour [Galand Tristan](https://galandtristan.be), mais avec le temps le résultat ne nous convenait plus et cela me donnait une bonne raison d'essayer le framework Svelte (couplé à SvelteKit pour le rendu côté serveur).
 
-## Creating a project
+En re-développant ce site, nous avons ajouté des embed de Figma afin d'afficher directement des maquettes depuis les pages du portfolio.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Technologies
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+- Svelte 
+- Sveltekit
+- Tailwind CSS
