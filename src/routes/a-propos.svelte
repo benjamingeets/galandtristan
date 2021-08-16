@@ -1,9 +1,10 @@
+
 <script>
 import { onMount } from "svelte";
 import { page } from '../store';
-import Social from "../components/global/Social.svelte";
-import Button from "../components/global/Button.svelte";
-import Head from "../components/Head.svelte"
+import Social from "$lib/global/Social.svelte";
+import Button from "$lib/global/Button.svelte";
+import Head from "$lib/Head.svelte"
     onMount(()=>{
         page.update(n => "a-propos")
     })

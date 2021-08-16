@@ -1,22 +1,23 @@
 <script context="module">
     export const load = async ({fetch}) =>{
-    const res = await fetch ("/api")
-    const data = await res.json()
-        return {
-            props:{
-                data
+        const res = await fetch ("/api/portfolio")
+        const data = await res.json()
+            return {
+                props:{
+                    data
+                }
             }
-        }
     }
     
 </script>
 
 <script>
-    import PortfolioThumbnail from "../../components/PortfolioThumbnail.svelte";
-    import Head from "../../components/Head.svelte"
+    import PortfolioThumbnail from "$lib/PortfolioThumbnail.svelte";
+    import ExternalIcon from "$lib/icons/ExternalIcon.svelte";
+    import Head from "$lib/Head.svelte"
+    
     import { onMount } from "svelte";
     import { page } from '../../store';
-    import ExternalIcon from "../../components/icons/ExternalIcon.svelte";
         onMount(()=>{
             page.update(n => "portfolio")
         })

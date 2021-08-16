@@ -1,10 +1,10 @@
 <script>
 import { onMount } from "svelte";
 import { page } from '../store';
-import Tristan from '../components/images/Tristan.svelte'
-import Button from "../components/global/Button.svelte";
-import Social from "../components/global/Social.svelte";
-import Head from "../components/Head.svelte";
+import Tristan from '$lib/images/Tristan.svelte'
+import Button from "$lib/global/Button.svelte";
+import Social from "$lib/global/Social.svelte";
+import Head from "$lib/Head.svelte";
 
 onMount(()=>{page.update(n => "")})//Update the store value to change CSS in navbar
 </script>

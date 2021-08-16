@@ -1,6 +1,6 @@
 <script context="module">
   import marked from "marked"
-  import Button from "../../components/global/Button.svelte";
+  import Button from "$lib/global/Button.svelte";
   import { onMount } from "svelte";
   import { page } from '../../store';
   const renderer = new marked.Renderer();
@@ -12,27 +12,27 @@
     baseUrl:"https://api.galandtristan.be",
     renderer: renderer
   })
-  export const load = async (context) => {
-    const slug = context.page.params.titre
-    const projet = await fetch(`https://api.galandtristan.be/projets?slug=${slug}`)
-    const res = await projet.json()
+  
+  export const load = async ({fetch,page}) => {
+    const slug = page.params.titre
+    const res = await fetch(`/api/${slug}`)
+    const projet = await res.json()
     return { 
       props: { 
-        res
+        projet
       }
     }
   }
   </script>
 
 <script>
-  import Head from "../../components/Head.svelte"
-  export let res
-  const projet = res[0]
+  import Head from "$lib/Head.svelte"
+  export let projet
   const titre = projet.titre
   onMount(()=>{
     page.update(n => "portfolio") 
   })
-  const description = marked(res[0].description);
+  const description = marked(projet.description);
 </script>
 
 <Head title="{titre} // Galand Tristan" lien="portfolio/{projet.slug}" description="{projet.meta_description}" image="https://api.galandtristan.be{projet.image.url}"/>
