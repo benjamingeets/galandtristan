@@ -13,9 +13,7 @@ export async function get() {
     })
 	sitemap = sitemap + "</urlset>"
 	return {
-		headers: {
-			'context-type': "application/xml"
-				},
+		headers: {'content-type': "application/xml"},
 		body: sitemap
 	};
 }
