@@ -22,9 +22,9 @@
 <header class="flex lg:justify-between justify-center items-center bg-turquoise text-white px-10 py-6">
 <h1 class="text-2xl custom-font"><a href="/">Galand Tristan</a></h1>
 <nav class="lg:w-5/12 absolute right-10">
-    <ul class="justify-evenly mt-2 lg:flex hidden">
+    <ul class="justify-end mt-2 lg:flex hidden">
         {#each routes as route}
-            <li class="flex items-center">
+            <li class="flex items-center mx-8">
                 {#if route.href == `/${current_page}`}
                   <a class="menu-item menu-item-selected" href="{route.href}">{route.name}</a>
                 
