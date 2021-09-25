@@ -20,9 +20,9 @@ import Head from "$lib/Head.svelte"
         </p>
         <div class="lg:w-6/12 w-12/12">
             <p class="lg:text-xl text-lg lg:mt-0 mt-10">
-                Depuis maintenant plusieurs années, ce qui me fait vibrer, c’est le design. Que ça soit pour la réalisation d’une identité graphique, d’une carte de restaurant ou bien du design d’un site web, chaque projet confirme mon envie de faire de cette passion mon métier.<br/>
-                Je me suis aussi passionné pour la randonnée légère et je réalise des temps à autre des vidéo qui en parle.
-                En ce qui concerne le graphisme, j’ai un <a class="text-turquoise" target="_blank" href="https://instagram.com/galandtristan.graphisme">compte Intagram dédié</a>, n’hésitez pas à aller jeter un coup d’œil. 
+                Je suis étudiant à la HEPH Condorcet en e-Business. Depuis plusieurs années maintenant, j'ai réalisé de nombreux projets ce qui m'a permis de gagner en expérience et ce qui fait de moi une personne polyvalente et pluridisciplinaire.
+                Je me suis formé au fil du temps dans l'UX design par le biais de projets et de formations.
+                J'ai aussi réalisé plusieurs illustrations graphiques disponibles sur un compte <a href="https://instagram.com/galandtristan.graphisme">Instagram</a> dédié.
             </p>
             <div class="flex items-center mt-4">
                 <Button target="_blank" href="/CV_Galand_Tristan.pdf">Mon CV</Button>

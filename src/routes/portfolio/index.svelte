@@ -39,7 +39,7 @@
 
         {/each}
 
-        <span class="mx-4 cursoir-pointer"><a target="_blank" href="https://instagram.com/galandtristan.graphisme">Graphisme <ExternalIcon/> </a></span>
+        <span class="mx-4 cursoir-pointer"><a target="_blank" href="https://instagram.com/galandtristan.graphisme"><span class="mr-2">Graphisme</span> <ExternalIcon/> </a></span>
     </p>
 </div>
 
