@@ -10,7 +10,7 @@ import Head from "$lib/Head.svelte"
     })
 </script>
 
-<Head title="A propos // Galand Tristan" lien="a-propos"/>
+<Head title="À propos // Galand Tristan" lien="a-propos"/>
 
 <section class="max-w-screen-xl mx-auto px-4">
     <h1 class="text-5xl custom-font text-center my-16">À propos</h1>
