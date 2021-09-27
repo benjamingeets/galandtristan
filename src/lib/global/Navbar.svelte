@@ -12,7 +12,7 @@
     const routes = [
         {name:"Accueil",href:"/"},
         {name:"Portfolio",href:"/portfolio"},
-       {name:"A propos", href:"/a-propos"} 
+       {name:"À propos", href:"/a-propos"} 
     ]
     
 	import { blur } from 'svelte/transition';

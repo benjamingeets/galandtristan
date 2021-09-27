@@ -13,7 +13,7 @@ import Head from "$lib/Head.svelte"
 <Head title="A propos // Galand Tristan" lien="a-propos"/>
 
 <section class="max-w-screen-xl mx-auto px-4">
-    <h1 class="text-5xl custom-font text-center my-16">A propos</h1>
+    <h1 class="text-5xl custom-font text-center my-16">À propos</h1>
     <div class="flex flex-wrap justify-between">
         <p class="lg:w-5/12 w-12/12">
             <img src="/media/galandtristan.webp" alt="Galand Tristan" title="Galand Tristan">
