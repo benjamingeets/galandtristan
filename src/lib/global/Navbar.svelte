@@ -43,7 +43,7 @@
 </header>
 
     {#if isMobileMenu}
-<div transition:blur="{{duration: 300}}" id="mobile-menu" class="bg-turquoise shadow-md absolute w-full text-white pl-10 block lg:hidden overflow-hidden rounded-b-lg">
+<div transition:blur="{{duration: 300}}" id="mobile-menu" class="bg-turquoise shadow-md absolute w-full text-white pl-10 block lg:hidden overflow-hidden rounded-b-lg z-10">
     <ul class="mb-10">
         {#each routes as route}
             <li class="py-2">
