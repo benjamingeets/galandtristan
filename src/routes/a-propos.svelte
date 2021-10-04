@@ -22,7 +22,7 @@ import Head from "$lib/Head.svelte"
             <p class="lg:text-xl text-lg lg:mt-0 mt-10">
                 Je suis étudiant à la HEPH Condorcet en e-Business. Depuis plusieurs années maintenant, j'ai réalisé de nombreux projets ce qui m'a permis de gagner en expérience et ce qui fait de moi une personne polyvalente et pluridisciplinaire.
                 Je me suis formé au fil du temps dans l'UX design par le biais de projets et de formations.
-                J'ai aussi réalisé plusieurs illustrations graphiques disponibles sur un compte <a href="https://instagram.com/galandtristan.graphisme">Instagram</a> dédié.
+                J'ai aussi réalisé plusieurs illustrations graphiques disponibles sur un compte <a class="text-turquoise" href="https://instagram.com/galandtristan.graphisme">Instagram</a> dédié.
             </p>
             <div class="flex items-center mt-4">
                 <Button target="_blank" href="/CV_Galand_Tristan.pdf">Mon CV</Button>
