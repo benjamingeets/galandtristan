@@ -1,25 +1,25 @@
 {
-	"name": "gt",
+	"name": "tristan-portfolio",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
-		"preview": "svelte-kit preview"
+		"preview": "svelte-kit preview",
+		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-node": "^1.0.0-next.35",
-		"@sveltejs/adapter-static": "^1.0.0-next.13",
+		"@sveltejs/adapter-static": "^1.0.0-next.20",
 		"@sveltejs/kit": "next",
-		"autoprefixer": "^10.2.6",
-		"cssnano": "^5.0.6",
-		"postcss": "^8.3.5",
+		"autoprefixer": "^10.3.6",
+		"cssnano": "^5.0.8",
+		"postcss": "^8.3.8",
 		"postcss-load-config": "^3.1.0",
-		"svelte": "^3.34.0",
-		"svelte-preprocess": "^4.7.4",
-		"tailwindcss": "^2.2.4"
+		"prettier": "^2.4.1",
+		"prettier-plugin-svelte": "^2.4.0",
+		"svelte": "^3.42.6",
+		"svelte-preprocess": "^4.9.5",
+		"tailwindcss": "^2.2.16"
 	},
-	"type": "module",
-	"dependencies": {
-		"marked": "^2.1.3"
-	}
+	"type": "module"
 }

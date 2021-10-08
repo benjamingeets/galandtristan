@@ -1,22 +1,12 @@
 const config = {
-	mode: "jit",
-	purge: [
-		"./src/**/*.{html,js,svelte,ts}",
-	],
-	theme: {
-		extend: {transitionProperty: {
-			'height': 'height'
-		  }},
-		colors:{
-			turquoise:{
-				DEFAULT: "#78E4CA"
-			},
-			white:{
-				DEFAULT:"#FFF"
-			}
-		}
-	},
-	plugins: [],
+  mode: "jit",
+  purge: ["./src/**/*.{html,js,svelte,ts}"],
+
+  theme: {
+    extend: {}
+  },
+
+  plugins: []
 };
 
 module.exports = config;
