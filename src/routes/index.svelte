@@ -1,2 +1,23 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script context="module">
+export const load = async ({fetch}) =>{
+    const req = await fetch("/api/get/index")
+    return{
+        props:{
+            content : await req.json()
+        }
+    }
+}
+</script>
+
+<script>
+    export let content
+    let title = "oui"
+</script>
+
+<svelte:head>
+    <title>{title}</title>
+</svelte:head>
+
+<div>
+    <h1>{content.titre}</h1>
+</div>

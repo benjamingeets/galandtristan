@@ -1,4 +1,17 @@
 /* Write your global styles here, in PostCSS syntax */
 @tailwind base;
+
+@font-face{
+    font-family: "Barlow-Regular";
+    src: url("/Barlow-Regular.ttf");
+    font-display: swap;
+}
+
+@layer base {
+    body{
+        @apply bg-black
+    }
+}
+
 @tailwind components;
 @tailwind utilities
