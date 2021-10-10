@@ -13,6 +13,7 @@
 
 <script>
     import Head from "$lib/Head.svelte"
+    import External from "$lib/External.svelte"
     import {onMount} from "svelte"
 import { displayMd } from "$lib/markdown";
 export let projet
@@ -26,7 +27,7 @@ let width
 <Head title="{projet.titre}"/>
 <svelte:window bind:innerWidth="{width}"/>
 
-<div class="max-w-5xl w-full mx-auto mt-20 px-4">
+<div class="max-w-5xl w-full mx-auto mt-20 px-4 pb-40">
     {#if width > 1000 && projet.figma != null}
 <iframe
 title={projet.titre}
@@ -37,10 +38,14 @@ src="https://www.figma.com/embed?embed_host=galandtristan&url={projet.figma}"
 allowfullscreen
 />
 {:else if width < 1000 && projet.figma != null}
-<img class="rounded-md mx-auto" src="{CMS}/{projet.mockup.path}" alt={projet.mockup.meta.title != undefined ? projet.mockup.meta.title : projet.titre}/>
+<img class="rounded-md mx-auto" src="{CMS}/{projet.mockup.path}" alt={projet.mockup.meta != undefined ? projet.mockup.meta.title : projet.titre}/>
 {/if}
-<article class="markdown text-white text-lg mb-40">
+<article class="markdown text-white text-lg">
     {@html displayMd(projet.contenu)}
+    
 </article>
+{#if projet.lienbouton}
+      <a href="{projet.lienbouton}" target="_blank" class="mt-6 transition text-white rounded-md bg-opacity-40 bg-orange hover:bg-opacity-100 hover:bg-white hover:text-orange flex justify-center w-40 mx-auto"><span class="my-2 flex items-center"> {projet.textebouton ? projet.textebouton : "Voir le site"}<External size=20/></span> </a>
+    {/if}
 </div>
 

@@ -20,6 +20,12 @@
     .markdown h1{
         @apply text-4xl my-6
     }
+    .markdown h2{
+        @apply text-3xl my-6
+    }
+    .markdown h3{
+        @apply text-3xl my-6
+    }
     .markdown p{
         @apply my-2
     }
