@@ -34,17 +34,17 @@ export let cv
 </script>
 <Head title="{content.titre}"/>
 
-<div class="max-w-7xl mx-auto w-full text-white px-4 pt-20">
+<div class="max-w-5xl mx-auto w-full text-white px-4 py-20">
     <h1 class="font-barlow text-center text-4xl mb-20 md:block hidden">{content.titre}</h1>
     <div class="flex justify-between md:flex-row flex-col">
         <div class="md:w-6/12 w-12/12 flex items-center">
             <img class="rounded-md" src="{CMS}/{content.image.path}" alt="{content.image.meta.title}">
         </div>
-        <div class="mt-10 md:w-5/12 w-12/12">
-            <div class="markdown lg:text-2xl md:text-xl text-lg"> 
+        <div class=" md:w-5/12 w-12/12">
+            <div class="markdown md:text-xl text-lg"> 
                 {@html displayMd(content.texte)}
             </div>
-            <div class="text-white flex justify-center mt-10 sm:gap-6 gap-1">
+            <div class="text-white flex justify-center sm:gap-6 gap-1">
                 <a class="hover:text-orange transition duration-200 ease-in-out" target="_blank" href="{CMS}/{cv.fichier}"><CV size=50/></a>
                 {#if social.linkedin != ""}<a href="{social.linkedin}" class="hover:text-orange transition duration-200 ease-in-out"><Linkedin size="50"/></a>{/if}
                 {#if social.instagram != ""}<a href="{social.instagram}" class="hover:text-orange transition duration-200 ease-in-out"><Instagram size="50"/></a>{/if}
