@@ -1,6 +1,6 @@
 <script context="module">
     export const load = async ({fetch}) =>{
-        const reqPortfolio = await fetch("/api/get/portfolio")
+        const reqPortfolio = await fetch("/api/get/portfolio/all")
         return{
             props:{
                 content : await reqPortfolio.json()
