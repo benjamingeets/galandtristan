@@ -11,6 +11,12 @@
     body{
         @apply bg-black
     }
+    .markdown{
+        @apply font-barlow
+    }
+    .markdown a{
+        @apply text-orange
+    }
 }
 
 @tailwind components;

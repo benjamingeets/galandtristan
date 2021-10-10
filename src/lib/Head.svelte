@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-    <title>{title}</title>
+    <title>{title == "Galand Tristan // Web design, infographie,... // Tournai (Belgique)" ? title : `${title} // Galand Tristan` }</title>
     <meta name="description" content={description}/>
   <link rel="canonical" href="https://galandtristan.be/{lien}">
   <meta property="og:type" content="website" />
