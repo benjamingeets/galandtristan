@@ -19,7 +19,6 @@ import PortfolioItem from "$lib/PortfolioItem.svelte";
             page.update(n=>"portfolio")
         })
     export let content
-    console.log(content)
     </script>
     <Head title="Portfolio"/>
 
