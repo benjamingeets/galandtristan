@@ -9,7 +9,8 @@ export async function get({params}) {
             'Content-Type':'application/json'
         },
         body:JSON.stringify({
-            fields:{titre:true,image:true,slug:true}
+            fields:{titre:true,image:true,slug:true},
+            sort:{date:-1}
         })
     })
     let res = await req.json()
