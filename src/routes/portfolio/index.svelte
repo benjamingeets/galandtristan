@@ -17,7 +17,7 @@ import PortfolioItem from "$lib/PortfolioItem.svelte";
         import {page} from "../../store"
         onMount(()=>{
             page.update(n=>"portfolio")
-            document.querySelector("body").style.backgroundPositionY="bottom -250px"
+            document.querySelector("body").style.backgroundPosition="bottom -250px center"
         })
     export let content
     </script>

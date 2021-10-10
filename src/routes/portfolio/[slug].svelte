@@ -18,7 +18,7 @@ import { displayMd } from "$lib/markdown";
 export let projet
 import {CMS} from "$lib/env.js"
 onMount(()=>{
-    document.querySelector("body").style.backgroundPositionY = "bottom -250px"
+    document.querySelector("body").style.backgroundPosition = "bottom -250px center"
 })
 let width
 </script>

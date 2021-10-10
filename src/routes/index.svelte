@@ -34,8 +34,8 @@ import Mail from "$lib/Mail.svelte"
     <h1 class="md:text-8xl text-4xl ">{content.titre}</h1>
     <p class="md:text-2xl text-lg text-center my-10">{@html displayMd(content.texte)}</p>
     <div class="flex flex-row items-center justify-center flex-wrap">
-        <a class="border rounded-md border-2 hover:border-orange hover:text-orange px-3 py-1 transition duration-200 ease-in-out" href="/portfolio"><span class="text-xl">Mes projets</span></a>
-        <div class="flex justify-center">
+        <a class="border rounded-md border-2 hover:border-orange hover:text-orange px-3 py-1 sm:mr-4 transition duration-200 ease-in-out" href="/portfolio"><span class="text-xl">Mes projets</span></a>
+        <div class="flex justify-center gap-2">
             {#if social.linkedin != ""}<a class="hover:text-orange transition duration-200 ease-in-out" target="_blank" href="{social.linkedin}"><Linkedin size="50"/></a>{/if}
             {#if social.instagram != ""}<a class="hover:text-orange transition duration-200 ease-in-out" target="_blank" href="{social.instagram}"><Instagram size="50"/></a>{/if}
             {#if social.youtube != ""}<a class="hover:text-orange transition duration-200 ease-in-out" target="_blank" href="{social.youtube}"><Youtube size="50"/></a>{/if}
