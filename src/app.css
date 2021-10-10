@@ -30,6 +30,9 @@
         @apply my-2
     }
     .markdown img{
+        @apply my-4
+    }
+    .markdown img{
         @apply rounded-md mx-auto
     }
 }
