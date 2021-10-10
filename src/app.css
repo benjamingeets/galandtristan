@@ -17,6 +17,15 @@
     .markdown a{
         @apply text-orange
     }
+    .markdown h1{
+        @apply text-4xl my-6
+    }
+    .markdown p{
+        @apply my-2
+    }
+    .markdown img{
+        @apply rounded-md mx-auto
+    }
 }
 
 @tailwind components;

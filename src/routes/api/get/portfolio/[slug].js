@@ -18,7 +18,7 @@ export async function get({params}) {
     let res = await req.json()
 	return {
         body:{
-            ...res.entries
+            ...res.entries[0]
         }
     }
 }

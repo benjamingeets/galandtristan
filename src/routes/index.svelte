@@ -22,6 +22,7 @@ import Mail from "$lib/Mail.svelte"
     import {page} from "../store"
     onMount(()=>{
         page.update(n=>"")
+        document.querySelector("body").style.backgroundPositionY = "bottom"
     })
     export let content
     export let social
@@ -29,7 +30,7 @@ import Mail from "$lib/Mail.svelte"
 
 <Head/>
 
-<div class="text-white font-barlow max-w-2xl mx-auto flex flex-col items-center md:mt-40 mt-20 px-4">
+<div class="text-white font-barlow max-w-2xl mx-auto flex flex-col items-center md:mt-40 mt-20 px-4" >
     <h1 class="md:text-8xl text-4xl ">{content.titre}</h1>
     <p class="md:text-2xl text-lg text-center my-10">{@html displayMd(content.texte)}</p>
     <div class="flex flex-row items-center justify-center flex-wrap">
@@ -42,6 +43,3 @@ import Mail from "$lib/Mail.svelte"
         </div>
     </div>
 </div>
-<footer class="mt-auto">
-    <p>Développé par Benjamin Geets // <a href="https://geets.dev">{`<geets.dev/>`}</a></p>
-</footer>

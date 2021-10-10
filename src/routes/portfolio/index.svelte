@@ -17,6 +17,7 @@ import PortfolioItem from "$lib/PortfolioItem.svelte";
         import {page} from "../../store"
         onMount(()=>{
             page.update(n=>"portfolio")
+            document.querySelector("body").style.backgroundPositionY="bottom -250px"
         })
     export let content
     </script>
@@ -24,7 +25,7 @@ import PortfolioItem from "$lib/PortfolioItem.svelte";
 
 <div class="max-w-7xl mx-auto w-full text-white px-4 pt-20">
     <h1 class="font-barlow text-center text-4xl mb-20 md:block hidden">Portfolio</h1>
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap mb-20">
         {#each content.projets as lien}
             <PortfolioItem titre="{lien.titre}" image="{CMS}/{lien.image.path}" link="/portfolio/{lien.slug}"/>
         {/each}
