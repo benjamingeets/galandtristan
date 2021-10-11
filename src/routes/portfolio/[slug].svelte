@@ -42,7 +42,6 @@ allowfullscreen
 {/if}
 <article class="markdown text-white text-lg">
     {@html displayMd(projet.contenu)}
-    
 </article>
 {#if projet.lienbouton}
       <a href="{projet.lienbouton}" target="_blank" class="mt-6 transition text-white rounded-md bg-opacity-40 bg-orange hover:bg-opacity-100 hover:bg-white hover:text-orange flex justify-center w-40 mx-auto"><span class="my-2 flex items-center"> {projet.textebouton ? projet.textebouton : "Voir le site"}<External size=20/></span> </a>
