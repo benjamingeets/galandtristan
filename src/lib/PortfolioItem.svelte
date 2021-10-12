@@ -20,7 +20,7 @@
     a:hover p{
         opacity: 1;
     }
-    div:hover a img{
+    div a:hover img{
         filter:blur(10px);
         transition: all ease-in-out 300ms;
     }
