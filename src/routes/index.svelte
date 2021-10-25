@@ -36,10 +36,10 @@ import Mail from "$lib/Mail.svelte"
     <div class="flex flex-row items-center justify-center flex-wrap">
         <a class="border rounded-md border-2 hover:border-orange hover:text-orange px-3 py-1 sm:mr-4 mt-4 transition duration-200 ease-in-out" href="/portfolio"><span class="text-xl">Mes projets</span></a>
         <div class="flex justify-center gap-2 mt-4">
-            {#if social.linkedin != ""}<a class="hover:text-orange transition duration-200 ease-in-out" target="_blank" href="{social.linkedin}"><Linkedin size="50"/></a>{/if}
-            {#if social.instagram != ""}<a class="hover:text-orange transition duration-200 ease-in-out" target="_blank" href="{social.instagram}"><Instagram size="50"/></a>{/if}
-            {#if social.youtube != ""}<a class="hover:text-orange transition duration-200 ease-in-out" target="_blank" href="{social.youtube}"><Youtube size="50"/></a>{/if}
-            {#if social.email != ""} <a class="hover:text-orange transition duration-200 ease-in-out" target="_blank" href="{social.email}"> <Mail size="50"/> </a>{/if}
+            {#if social.linkedin != ""}<a title="Linkedin" rel="noreferrer" class="hover:text-orange transition duration-200 ease-in-out" target="_blank" href="{social.linkedin}"><Linkedin size="50"/></a>{/if}
+            {#if social.instagram != ""}<a title="Instagram" rel="noreferrer" class="hover:text-orange transition duration-200 ease-in-out" target="_blank" href="{social.instagram}"><Instagram size="50"/></a>{/if}
+            {#if social.youtube != ""}<a title="Youtube" rel="noreferrer" class="hover:text-orange transition duration-200 ease-in-out" target="_blank" href="{social.youtube}"><Youtube size="50"/></a>{/if}
+            {#if social.email != ""} <a title="E-mail" rel="noreferrer" class="hover:text-orange transition duration-200 ease-in-out" target="_blank" href="{social.email}"> <Mail size="50"/> </a>{/if}
         </div>
     </div>
 </div>
