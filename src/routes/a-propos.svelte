@@ -22,11 +22,6 @@ import Linkedin from "$lib/Linkedin.svelte"
 import Instagram from "$lib/Instagram.svelte"
 import Youtube from "$lib/Youtube.svelte"
 import Mail from "$lib/Mail.svelte"
-import {onMount} from "svelte"
-    import {page} from "../store"
-    onMount(()=>{
-        page.update(n=>"a-propos")
-    })
 export let content
 export let social
 export let cv

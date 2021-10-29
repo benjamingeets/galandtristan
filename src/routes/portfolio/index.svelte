@@ -14,9 +14,7 @@
     import {CMS} from "$lib/env.js"
 import PortfolioItem from "$lib/PortfolioItem.svelte";
     import {onMount} from "svelte"
-        import {page} from "../../store"
         onMount(()=>{
-            page.update(n=>"portfolio")
             document.querySelector("body").style.backgroundPosition="bottom -250px center"
         })
     export let content

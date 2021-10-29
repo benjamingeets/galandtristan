@@ -19,9 +19,7 @@ import Instagram from "$lib/Instagram.svelte"
 import Youtube from "$lib/Youtube.svelte"
 import Mail from "$lib/Mail.svelte"
     import {onMount} from "svelte"
-    import {page} from "../store"
     onMount(()=>{
-        page.update(n=>"")
         document.querySelector("body").style.backgroundPositionY = "bottom"
     })
     export let content
