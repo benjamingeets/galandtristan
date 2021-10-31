@@ -19,7 +19,7 @@ import PortfolioItem from "$lib/PortfolioItem.svelte";
         })
     export let content
     </script>
-    <Head title="Portfolio"/>
+    <Head title="Portfolio" lien="portfolio"/>
 
 <div class="max-w-7xl mx-auto w-full text-white px-4 pt-20">
     <h1 class="font-barlow text-center text-4xl mb-20 md:block hidden">Portfolio</h1>

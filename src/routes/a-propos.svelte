@@ -27,7 +27,7 @@ export let social
 export let cv
 
 </script>
-<Head title="{content.titre}"/>
+<Head title="{content.titre}" lien="a-propos"/>
 
 <div class="max-w-5xl mx-auto w-full text-white px-4 py-20">
     <h1 class="font-barlow text-center text-4xl mb-20 md:block hidden">{content.titre}</h1>

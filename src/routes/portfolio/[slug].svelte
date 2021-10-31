@@ -24,7 +24,7 @@ onMount(()=>{
 let width
 </script>
 
-<Head title="{projet.titre}"/>
+<Head title="{projet.titre}" lien={`portfolio/${projet.slug}`}/>
 <svelte:window bind:innerWidth="{width}"/>
 
 <div class="max-w-5xl w-full mx-auto mt-20 px-4 pb-40">
