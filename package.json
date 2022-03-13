@@ -1,28 +1,15 @@
 {
-	"name": "tristan-portfolio",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
-		"preview": "svelte-kit preview",
-		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
-		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-static": "^1.0.0-next.20",
-		"@sveltejs/kit": "next",
-		"autoprefixer": "^10.3.6",
-		"cssnano": "^5.0.8",
-		"postcss": "^8.3.8",
-		"postcss-load-config": "^3.1.0",
-		"prettier": "^2.4.1",
-		"prettier-plugin-svelte": "^2.4.0",
-		"svelte": "^3.42.6",
-		"svelte-preprocess": "^4.9.5",
-		"tailwindcss": "^2.2.16"
-	},
-	"type": "module",
-	"dependencies": {
-		"marked": "^3.0.7"
-	}
+  "name": "@example/starter",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^0.24.0",
+    "@astrojs/renderer-react": "^0.5.0"
+  }
 }
