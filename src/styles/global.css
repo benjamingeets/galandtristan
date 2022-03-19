@@ -1,8 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@font-face {
-	font-family: 'Comfortaa';
-	src: url('/public/assets/fonts/Comfortaa-VariableFont_wght.ttf');
-}
