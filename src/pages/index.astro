@@ -1,7 +1,27 @@
 ---
 import Main from "../layouts/Main.astro"
+import Hero from "../components/Hero.astro"
+import GetHomepage from "../queries/homepage"
+const home = await GetHomepage()
+console.log(home.composants)
 ---
 
 <Main>
-	
+	{home.composants.map(composant=>
+        {
+            switch (composant._modelApiKey) {
+                case "hero":
+                    return(
+                        <Hero/>
+                    )
+                    break;
+            
+                default:
+                    return (
+                        <p>{composant._modelApiKey} introuvable</p>
+                    )
+                    break;
+            }
+        }
+    )}
 </Main>
