@@ -1,0 +1,21 @@
+---
+const {isDark = false, href} = Astro.props
+let containerStyle = "font-semibold text-xl px-5 py-2 rounded leading-[130%]" + " "
+if(isDark){
+    containerStyle += ""
+}else{
+    containerStyle += "bg-gradient"
+}
+---
+
+{href && (
+  <a class={containerStyle} href={href}>
+    <slot/>
+  </a>
+)}
+
+{!href && 
+    <button class={containerStyle}>
+        <slot/>
+    </button>
+}

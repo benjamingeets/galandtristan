@@ -1,7 +1,15 @@
 module.exports = {
   content: ["./src/**/*.{html,js,astro}"],
   theme: {
-    extend: {},
+    extend: {
+
+      maxWidth: {
+        '8xl': '102rem'
+      },
+      fontFamily:{
+        'main':"Josephin",
+      }
+    },
   },
   plugins: [],
 }

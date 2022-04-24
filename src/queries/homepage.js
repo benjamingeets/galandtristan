@@ -24,6 +24,7 @@ const GetHomepage = async () => {
                         url
                         alt
                       }
+                    markdown
                       _modelApiKey
                     }
                     ... on PortfolioRecord {

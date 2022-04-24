@@ -3,7 +3,6 @@ import Main from "../layouts/Main.astro"
 import Hero from "../components/Hero.astro"
 import GetHomepage from "../queries/homepage"
 const home = await GetHomepage()
-console.log(home.composants)
 ---
 
 <Main>
@@ -12,7 +11,7 @@ console.log(home.composants)
             switch (composant._modelApiKey) {
                 case "hero":
                     return(
-                        <Hero/>
+                        <Hero data={composant}/>
                     )
                     break;
             

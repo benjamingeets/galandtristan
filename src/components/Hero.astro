@@ -1,3 +1,24 @@
-<section>
-    Hero
+---
+import { Markdown } from 'astro/components';
+const {data} = Astro.props
+---
+<section class="flex flex-col max-w-6xl p-24 mx-auto gap-7">
+   <figure>
+      <img src={data.image.url} alt="">
+   </figure>
+   <Markdown content={data.markdown}/>
 </section>
+
+<style>
+   section h1{
+      @apply font-bold text-5xl;
+   }
+   section p{
+      @apply text-xl;
+   }
+   h1 strong{
+      background: -webkit-linear-gradient(#72AFD3, #37ECBA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   }
+</style>

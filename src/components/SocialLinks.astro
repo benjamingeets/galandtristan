@@ -1,0 +1,25 @@
+---
+import Icon from './Icon.astro';
+const {links} = Astro.props
+let urls = []
+links.forEach(link=>{
+    let url = new URL(link.lien)
+    let displayLink = {
+        link,
+        icon:url.host.split('.')[0]
+    }
+    urls.push(displayLink)
+})
+console.log(urls)
+---
+    <nav class="fixed left-10 top-80">
+        <ul class="flex flex-col gap-3">
+            {urls.map(link=>
+                <li>
+                    <a target="_blank" href={link.link.lien}>
+                        <Icon name={link.icon} classes="text-red-500"/>
+                    </a>
+                </li>
+            )}
+        </ul>
+    </nav>

@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: Josephin;
+    src: url("/fonts/JosefinSans-VariableFont_wght.ttf");
+    font-display: swap;
+}
+*{
+    @apply text-white font-main;
+}
+
+.text-gradient{
+    background: -webkit-linear-gradient(#72AFD3, #37ECBA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bg-gradient{
+    background: linear-gradient(45deg, #72AFD3 -0.03%, #37ECBA 100.03%);
+}
+body{
+    background-image:url("/dot.svg");
+    background-repeat: repeat;
+    
+}
