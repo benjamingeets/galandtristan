@@ -11,14 +11,26 @@ const GetPortfolio = async () => {
             body: JSON.stringify({
                 query: `
                 query MyQuery {
-                    navigation {
-                      liens {
-                        lien
-                        texte
-                        bouton
-                      }
+                  allProjets {
+                    titre
+                    description
+                    slug
+                    role
+                    portfolioContenu
+                    date
+                    icone {
+                      url
+                    }
+                    typeDeProjet
+                    mockup {
+                      url
                     }
                   }
+                  allProjets {
+                    id
+                  }
+                }
+                
             `
             }),
         }

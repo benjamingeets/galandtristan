@@ -8,6 +8,12 @@ module.exports = {
       },
       fontFamily:{
         'main':"Josephin",
+      },
+      colors:{
+        gray:{
+          'DEFAULT':'#888787',
+          'dark':'#1F1F1F'
+        }
       }
     },
   },

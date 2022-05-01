@@ -2,7 +2,7 @@
 const {name,size=44, classes}= Astro.props
 --- 
 
-<svg xmlns="http://www.w3.org/2000/svg" class={"stroke-current" + " " + classes} width={size} height={size} viewBox="0 0 24 24" stroke-width="1.5" stroke="#888787" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" style="stoke: linear-gradient(45deg, #72AFD3 -0.03%, #37ECBA 100.03%);" class={classes} width={size} height={size} viewBox="0 0 24 24" stroke-width="1.5" stroke="#888787" fill="none" stroke-linecap="round" stroke-linejoin="round">
 
 {()=>{
     switch(name){

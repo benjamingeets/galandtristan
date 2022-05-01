@@ -1,6 +1,6 @@
 ---
-const {isDark = false, href} = Astro.props
-let containerStyle = "font-semibold text-xl px-5 py-2 rounded leading-[130%]" + " "
+const {isDark = false, href, icon} = Astro.props
+let containerStyle = "gap-2 flex group font-semibold text-xl px-5 py-2 text-black rounded leading-[130%]" + " "
 if(isDark){
     containerStyle += ""
 }else{
@@ -11,11 +11,21 @@ if(isDark){
 {href && (
   <a class={containerStyle} href={href}>
     <slot/>
+    {icon &&
+   
+      <span class="w-0 transition scale-0 group-hover:w-auto group-hover:scale-100"  set:html={icon}>
+      </span>
+    } 
   </a>
 )}
 
 {!href && 
     <button class={containerStyle}>
         <slot/>
+
+    {icon &&
+      <span class="transition scale-0 group-hover:scale-100" set:html={icon}>
+      </span>
+    } 
     </button>
 }

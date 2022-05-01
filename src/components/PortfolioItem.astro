@@ -1,0 +1,26 @@
+---
+const {projet} = Astro.props
+
+const url = new URL(Astro.canonicalURL)
+---
+<div class="relative grid grid-cols-3 mx-auto mb-24 overflow-hidden transition max-w-8xl bg-gray-dark rounded-2xl group">
+    <figure class="aspect-[10/6] col-span-2">
+        <img class="object-cover w-full h-full transition group-hover:scale-110" src={projet.mockup.url} alt="">
+    </figure>
+    <div class="z-10 flex flex-col h-full p-10 bg-gray-dark">
+        <figure>
+            <img src={projet.icone.url} alt="">
+        </figure>
+        <p class="text-3xl font-semibold mt-11 ">
+            {projet.description}
+        </p>
+        <div class="flex justify-between mt-auto ">
+             <a class="text-4xl font-bold transition hover-gradient before:absolute before:inset-0 text-gray"  href={"https://" + url.host + "/" + projet.slug}>Voir le projet</a>      
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-gray" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <polyline points="9 6 15 12 9 18" />
+            </svg>
+        </div>
+
+    </div>
+</div>

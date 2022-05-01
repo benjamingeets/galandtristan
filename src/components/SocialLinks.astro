@@ -10,14 +10,13 @@ links.forEach(link=>{
     }
     urls.push(displayLink)
 })
-console.log(urls)
 ---
     <nav class="fixed left-10 top-80">
         <ul class="flex flex-col gap-3">
             {urls.map(link=>
                 <li>
-                    <a target="_blank" href={link.link.lien}>
-                        <Icon name={link.icon} classes="text-red-500"/>
+                    <a class=" stroke-gray" target="_blank" href={link.link.lien}>
+                        <Icon name={link.icon} classes=" stroke"/>
                     </a>
                 </li>
             )}

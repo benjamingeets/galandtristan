@@ -1,0 +1,19 @@
+---
+import Button from './Button.astro';
+import PortfolioItem from './PortfolioItem.astro';
+import GetPortfolio from '../queries/portfolio';
+const {data}=Astro.props
+const projects = await GetPortfolio()
+---
+<section class="flex flex-col items-center px-4">
+    <PortfolioItem projet={projects.allProjets[0]}/>
+    <PortfolioItem projet={projects.allProjets[1]}/>
+    <Button href="/realisations" icon={`<svg xmlns="http://www.w3.org/2000/svg" class="h-full stroke-black" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18 15l3 -3l-3 -3" />
+  <circle cx="5" cy="12" r="2" />
+  <path d="M7 12h14" />
+</svg>`}>
+        Voir toutes mes réalisations
+    </Button>
+</section>
