@@ -12,7 +12,6 @@ up.compiler('#services',()=>{
     items[0].classList.add("bg-gradient")
     items.forEach(item=>{
         item.addEventListener('click',()=>{
-            console.log(item.querySelector('p').textContent)
             document.querySelector('#services-text').querySelector('p').textContent = item.querySelector('p').textContent
             items.forEach(item2=>{
                 if(item2.classList.contains('bg-gradient')){
