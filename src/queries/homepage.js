@@ -1,4 +1,6 @@
 const GetHomepage = async () => { 
+  console.log(fetch)
+  console.log(import.meta.env.ENDPOINT)
     const data = await fetch(
         import.meta.env.ENDPOINT,
         {
