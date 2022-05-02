@@ -15,7 +15,7 @@ const url = new URL(Astro.canonicalURL)
             {projet.description}
         </p>
         <div class="items-center justify-between hidden mt-auto lg:flex">
-             <a class="block text-2xl font-bold transition hover-gradient before:absolute before:inset-0 text-gray"  href={"https://" + url.host + "/" + projet.slug}>Voir le projet</a>      
+             <a class="block text-2xl font-bold transition hover-gradient before:absolute before:inset-0 text-gray"  href={url.host + "/" + projet.slug}>Voir le projet</a>      
             <svg xmlns="http://www.w3.org/2000/svg" class="stroke-gray" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <polyline points="9 6 15 12 9 18" />
