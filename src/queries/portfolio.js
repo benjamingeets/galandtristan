@@ -1,12 +1,12 @@
 const GetPortfolio = async () => {
     const data = await fetch(
-        import.meta.env.ENDPOINT,
+        import.meta.env.ENDPOINT ?? process.env.ENDPOINT,
         {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
-                'Authorization': `Bearer ${import.meta.env.TOKEN}`,
+                'Authorization': `Bearer ${import.meta.env.TOKEN ?? process.env.TOKEN}`,
             },
             body: JSON.stringify({
                 query: `

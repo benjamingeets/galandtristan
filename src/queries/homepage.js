@@ -1,15 +1,12 @@
 const GetHomepage = async () => { 
-  console.log(fetch)
-  console.log(import.meta.env.ENDPOINT)
-  console.log(process.env.ENDPOINT)
     const data = await fetch(
-        import.meta.env.ENDPOINT,
+        import.meta.env.ENDPOINT ?? process.env.ENDPOINT,
         {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-            'Authorization': `Bearer ${import.meta.env.TOKEN}`,
+            'Authorization': `Bearer ${import.meta.env.TOKEN ?? process.env.ENDPOINT}`,
         },
         body: JSON.stringify({
             query: `query MyQuery {
