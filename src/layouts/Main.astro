@@ -5,8 +5,8 @@ import SocialLinks from '../components/SocialLinks.astro';
 import GetSocialLinks from '../queries/sociallinks';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-const social = await GetSocialLinks()
-const meta = await GetMeta();
+const social = await GetSocialLinks(import.meta.env.TOKEN)
+const meta = await GetMeta(import.meta.env.TOKEN);
 
 const {title} = Astro.props
 const url = new URL(Astro.canonicalURL)

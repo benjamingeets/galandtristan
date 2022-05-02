@@ -1,12 +1,12 @@
-const GetHomepage = async () => { 
+const GetHomepage = async (token) => { 
     const data = await fetch(
-        import.meta.env.ENDPOINT ?? process.env.ENDPOINT,
+      "https://graphql.datocms.com/",
         {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-            'Authorization': `Bearer ${import.meta.env.TOKEN ?? process.env.ENDPOINT}`,
+            'Authorization': `Bearer ${token}`,
         },
         body: JSON.stringify({
             query: `query MyQuery {
