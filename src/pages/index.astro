@@ -5,6 +5,7 @@ import Main from "../layouts/Main.astro"
 import Hero from "../components/Hero.astro"
 import GetHomepage from "../queries/homepage"
 import MyServices from '../components/MyServices.astro';
+import Contact from '../components/Contact.astro';
 const home = await GetHomepage()
 ---
 
@@ -29,6 +30,10 @@ const home = await GetHomepage()
                 case "service":
                     return(
                         <MyServices data={composant}/>
+                    )
+                case "contactform":
+                    return(
+                        <Contact data={composant}/>
                     )
                 default:
                     return (
