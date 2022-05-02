@@ -4,6 +4,7 @@ import WhoAmI from '../components/WhoAmI.astro';
 import Main from "../layouts/Main.astro"
 import Hero from "../components/Hero.astro"
 import GetHomepage from "../queries/homepage"
+import MyServices from '../components/MyServices.astro';
 const home = await GetHomepage()
 ---
 
@@ -23,6 +24,11 @@ const home = await GetHomepage()
                 case "portfolio":
                     return(
                         <Portfolio data={composant}/>
+                    )
+
+                case "service":
+                    return(
+                        <MyServices data={composant}/>
                     )
                 default:
                     return (

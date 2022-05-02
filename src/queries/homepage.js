@@ -46,11 +46,7 @@ const GetHomepage = async () => {
                     ... on ServiceRecord {
                       _modelApiKey
                       item {
-                        description {
-                          value
-                          links
-                          blocks
-                        }
+                        texte
                         nom
                         image {
                           url

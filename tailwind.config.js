@@ -2,7 +2,9 @@ module.exports = {
   content: ["./src/**/*.{html,js,astro}"],
   theme: {
     extend: {
-
+      screens:{
+        '3xl': '1770px',
+      },
       maxWidth: {
         '8xl': '102rem'
       },

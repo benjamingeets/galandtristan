@@ -1,0 +1,35 @@
+---
+import { Markdown } from 'astro/components';
+import Button from './Button.astro';
+const {data} = Astro.props
+console.log(data.item[0])
+---
+
+<section class="flex flex-col w-full gap-10 mx-auto mt-32 lg:px-20 xl:flex-row lg:gap-24 max-w-8xl lg:mt-48 2xl:px-0">
+    <div id="services-text" class="hidden p-20 xl:w-6/12 xl:px-32 lg:block bg-gray-dark xl:py-44 space-y-7 rounded-2xl">
+        <h2 class="text-3xl font-semibold">{data.item[0].nom}</h2>
+        <Markdown content={data.item[0].texte}/>
+        <Button>Me contacter</Button>
+    </div>
+    <div class="grid w-full gap-10 px-4 lg:px-0 xl:w-6/12 lg:gap-24 lg:grid-cols-2">
+        {data.item.map(service=>
+            <div class="flex flex-col w-full h-full px-5 py-10 pb-10 lg:items-center lg:p-12 bg-gray-dark lg:aspect-square rounded-2xl">
+                <h3 class="order-2 text-3xl font-semibold my-7 lg:my-11 lg:order-1">
+                    {service.nom}
+                </h3>
+                <figure class="order-1 lg:order-2">
+                    <img src={service.image.url} alt="">
+                </figure>
+                    <Markdown class="order-3 text-2xl font-semibold lg:hidden mt-7" content={service.texte}/>
+       
+            </div>
+        )}
+    </div>
+    
+</section>
+
+<style>
+    #services-text p{
+        @apply text-2xl font-semibold;
+    }
+</style>

@@ -20,7 +20,7 @@ const links = [
 ]
 ---
 
-<section class="flex justify-between w-full px-4 mx-auto mb-48 mt-14 max-w-8xl">
+<section class="flex items-center justify-between w-full px-4 mx-auto mt-3 mb-20 lg:mb-48 md:mt-14 max-w-8xl">
     <figure class="flex items-end gap-6">
         <img class="w-8 h-8 " src={icon} alt="">
         <figcaption class="flex items-end">
@@ -29,7 +29,18 @@ const links = [
             </a>
         </figcaption>
     </figure>
-    <nav>
+    <button class="flex flex-col w-6 gap-1 md:hidden">
+        <div class="w-full h-[2px] bg-white">
+        </div>
+        <div class="w-full h-[2px] bg-white">
+        </div>
+        <div class="w-full h-[2px] bg-white">
+        </div>
+        <span class="sr-only">
+            Menu
+        </span>
+    </button>
+    <nav class="hidden md:block">
         <ul class="flex gap-16">
             {links.map(link=>
                 <li>
