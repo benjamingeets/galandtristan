@@ -3,7 +3,7 @@ import Button from './Button.astro';
 import PortfolioItem from './PortfolioItem.astro';
 import GetPortfolio from '../queries/portfolio';
 const {data}=Astro.props
-const projects = await GetPortfolio(import.meta.env.TOKEN)
+const projects = await GetPortfolio(import.meta.env.PUBLIC_TOKEN)
 ---
 <section class="flex flex-col items-center px-4 lg:px-20">
 <h2 class="mb-10 text-3xl font-semibold text-center lg:mb-24">Mes réalisations</h2>
