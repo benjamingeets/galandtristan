@@ -3,8 +3,8 @@ const {projet} = Astro.props
 
 const url = new URL(Astro.canonicalURL)
 ---
-<div class="relative grid mx-auto mb-12 overflow-hidden transition md:mb-24 lg:grid-cols-3 max-w-8xl bg-gray-dark rounded-2xl group">
-    <figure class="col-span-2 overflow-hidden aspect-[10/6] lg:aspect-auto  lg:h-[37.5rem]">
+<div class="relative grid w-full max-w-6xl mx-auto mb-12 overflow-hidden transition md:mb-24 lg:grid-cols-3 bg-gray-dark rounded-2xl group">
+    <figure class="col-span-2 overflow-hidden aspect-[10/6] lg:aspect-auto  lg:h-96">
         <img class="object-cover object-left w-full h-full transition group-hover:scale-110" src={projet.mockup.url} alt="">
     </figure>
     <div class="z-10 flex flex-col w-full h-full p-5 lg:p-10 bg-gray-dark">
