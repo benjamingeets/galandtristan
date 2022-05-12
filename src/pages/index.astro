@@ -1,46 +1,13 @@
 ---
-import Portfolio from '../components/Portfolio.astro';
-import WhoAmI from '../components/WhoAmI.astro';
-import Main from "../layouts/Main.astro"
-import Hero from "../components/Hero.astro"
-import GetHomepage from "../queries/homepage"
-import MyServices from '../components/MyServices.astro';
-import Contact from '../components/Contact.astro';
-const home = await GetHomepage(process.env.NETLIFY ? process.env.PUBLIC_TOKEN : import.meta.env.PUBLIC_TOKEN)
+
 ---
-
-<Main>
-	{home.composants.map(composant=>
-        {
-            switch (composant._modelApiKey) {
-                case "hero":
-                    return(
-                        <Hero data={composant}/>
-                    )
-                    break;
-                case "qui_suis_je":
-                    return(
-                        <WhoAmI data={composant}/>
-                    )
-                case "portfolio":
-                    return(
-                        <Portfolio data={composant}/>
-                    )
-
-                case "service":
-                    return(
-                        <MyServices data={composant}/>
-                    )
-                case "contactform":
-                    return(
-                        <Contact data={composant}/>
-                    )
-                default:
-                    return (
-                        <p>{composant._modelApiKey} introuvable</p>
-                    )
-                    break;
-            }
-        }
-    )}
-</Main>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+	</body>
+</html>
