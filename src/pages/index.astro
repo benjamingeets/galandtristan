@@ -1,4 +1,9 @@
 ---
 import Main from "../layouts/Main.astro"
+import GetHomepage from "../queries/homepage"
+const home = await GetHomepage(process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN)
+
 ---
-<Main>Index</Main>
+<Main>
+	index
+</Main>

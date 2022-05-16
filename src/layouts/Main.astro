@@ -1,5 +1,14 @@
 ---
 import '../style/app.css'
+import Navbar from '../components/Navbar.svelte';
+import GetMeta from '../queries/meta';
+import GetSocialLinks from '../queries/social';
+const token = process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN
+const social = await GetSocialLinks(token)
+const meta = await GetMeta(token);
+const {title} = Astro.props
+const url = new URL(Astro.canonicalURL)
+let displayTitle = title ? title + " " + meta.globalSeo.titleSuffix : meta.globalSeo.siteName + " " + meta.globalSeo.titleSuffix
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -7,9 +16,15 @@ import '../style/app.css'
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{displayTitle}</title>
+    <link rel="icon" type="image/x-icon" href={meta.favicon.url}>
+
 </head>
 <body>
+    <Navbar client:load icon={meta.favicon.url} currentUrl={url} socialLinks={social}/>
     <slot/>
+    <script>
+        import "../scripts/app.js"
+    </script>
 </body>
 </html>
