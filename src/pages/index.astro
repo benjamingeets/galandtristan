@@ -3,10 +3,10 @@ import Hero from "../components/Hero.astro";
 import Project from "../components/Project.astro";
 import WhoAmI from "../components/WhoAmI.astro";
 import Main from "../layouts/Main.astro"
-import Skills from "../components/Skills.svelte"
+import Skills from "../components/Skills.astro"
 import GetHomepage from "../queries/homepage"
 import GetPortfolio from "../queries/portfolio";
-import Button from "../components/Button.svelte";
+import Button from "../components/Button.astro";
 const home = await GetHomepage(process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN)
 const {allProjets} = await GetPortfolio(process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN)
 ---

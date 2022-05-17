@@ -1,9 +1,9 @@
 ---
 import { Markdown } from 'astro/components';
-import Button from './Button.svelte';
+import Button from './Button.astro';
 const {text,image}= Astro.props
 ---
-<section class="grid justify-center w-full max-w-6xl gap-12 px-4 mx-auto lg:grid-cols-3 lg:gap-36 lg:px-0">
+<section id="whoami" class="grid justify-center w-full max-w-6xl gap-12 px-4 mx-auto lg:grid-cols-3 lg:gap-36 lg:px-0">
     <figure class="px-10 lg:px-0">
         <img class="mx-auto" src={image.url} alt="" width={image.width} height={image.height}>
     </figure>
@@ -12,13 +12,3 @@ const {text,image}= Astro.props
         <Button href="#contact" className="self-start">Me contacter</Button>
     </div>
 </section>
-
-
-<style>
-    div h2{
-        @apply text-3xl;
-    }
-    div p{
-        @apply text-lg;
-    }
-</style>

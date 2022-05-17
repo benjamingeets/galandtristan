@@ -1,9 +1,8 @@
-<script>
-import Button from "./Button.svelte";
-
-    export let skills;
-    let pickedSkills = skills[0]
-</script>
+---
+    import Button from "./Button.astro";
+     const {skills} = Astro.props
+     const pickedSkills = skills[0]
+---
 
 <section class="hidden xl:block mt-36">
     <h2 class="mb-20 text-3xl text-center text-white">Mes compétences</h2>
@@ -15,14 +14,14 @@ import Button from "./Button.svelte";
                 <Button href="#contact" outline={true} className="">Me contacter</Button>
             </div>
         </div>
-        {#each skills as skill}
-            <div class={"cursor-pointer skill overflow-hidden aspect-square rounded-2xl" + " " + (pickedSkills == skill ? 'bg-gradient' :'')}>
+        {skills.map(skill=>
+         <div class={"cursor-pointer skill overflow-hidden aspect-square rounded-2xl" + " " + (pickedSkills == skill ? 'bg-gradient' :'')}>
                 <figure class="flex flex-col items-center justify-center w-full h-full transition p-7 gap-7 bg-loakgrey-dark hover:bg-[#313131] rounded-2xl">
                     <figcaption class="text-xl text-center text-white">{skill.nom}</figcaption>
                     <img  class=" w-28" src={skill.image.url} alt={skill.image.alt} width={skill.image.width} height={skill.image.height}>
                 </figure>
                 <p class="sr-only">{skill.texte}</p>
             </div>
-        {/each}
+        )}
     </div>
 </section>

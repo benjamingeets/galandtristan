@@ -1,7 +1,7 @@
-<script>
-    import Button from "./Button.svelte";
-    export let services
-</script>
+---
+import Button from "./Button.astro";
+const {services} = Astro.props
+---
 
 
 <section id="contact" class="w-full max-w-6xl px-4 mx-auto text-white md:p-16 md:bg-loakgrey-dark rounded-2xl mt-36">
@@ -14,10 +14,11 @@
                 <label for="service"class="my-4 xl:my-0">et je suis souhaite</label>
                 <div class="px-5 py-4 mx-1 bg-loakgrey-dark rounded-xl">
                     <select required name="service" id="service">
-                        <option value="" disabled>Séléctionner</option>
-                        {#each services as {element}}
-                            <option value="">{element}</option>
-                        {/each}
+                        <option value="" disabled selected>Séléctionner</option>
+                    
+                        {services.map(({element})=>
+                         <option value="">{element}</option>
+                        )}
                     </select>
                 </div>
             </div>
@@ -48,18 +49,3 @@
         </form>
     </div>
 </section>
-
-<style>
-    input, select{
-        @apply  text-lg mx-1 bg-loakgrey-dark;
-    }
-    option{
-        @apply font-sans;
-    }
-    input{
-        @apply  border-b-2 border-white py-1 px-2  w-64;
-    }
-    input:focus{
-        @apply outline-none border-[#37ECBA] ;
-    }
-</style>

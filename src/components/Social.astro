@@ -1,18 +1,18 @@
-<script>
-    export let links;
-    export let position;
-    const getHostname = (url) => {
-        const currentUrl = new URL(url);
-        const hostname = currentUrl.host.split(".")[0];
-        return hostname;
-    };
-    const isInMenu =  position == "menu"
-</script>
+---
+const {links,position} = Astro.props
+
+const getHostname = (url) => {
+    const currentUrl = new URL(url);
+    const hostname = currentUrl.host.split(".")[0];
+    return hostname;
+};
+const isInMenu =  position == "menu"
+---
 
 <nav class={isInMenu ? "md:hidden" : "fixed lg:left-4 top-0 hidden lg:flex h-screen items-center"}>
     <ul class={"flex" + " " + (isInMenu ? null : "flex-col gap-5")}>
-        {#each links as link}
-            <li>
+        {links.map(link=>
+        <li>
                 <a target="_blank" href={link.lien}>
                     <figure class="relative group">
 
@@ -24,6 +24,6 @@
                     </figure>
                 </a>
             </li>
-        {/each}
+        )}
     </ul>
 </nav>
