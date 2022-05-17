@@ -37,24 +37,8 @@ const props = Astro.props
                 </li>
             </ul>
     </section>
-    <article class="relative w-full max-w-6xl mx-auto text-white ">
+    <article id="project" class="relative w-full max-w-6xl mx-auto text-white ">
         <Markdown content={props.portfolioContenu}/>
     </article>
 </Main>
 
-<style>
-    article p img{
-        @apply my-10 lg:my-36 xl:w-[72rem] xl:-ml-[12.5rem] max-w-full  xl:max-w-[100vw] rounded-2xl;
-    }
-    article p {
-        @apply text-lg xl:w-[47rem] mx-auto px-4 lg:px-0;
-    } 
-    article h2{
-        @apply text-3xl mb-6 xl:w-[47rem] mx-auto px-4 lg:px-0;
-    }
-
-    article h3{
-        @apply text-2xl mb-6 xl:w-[47rem] mx-auto px-4 lg:px-0;
-    }
-    
-</style>
