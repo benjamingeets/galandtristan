@@ -34,17 +34,24 @@ const setSkill = () => {
 const toggleNav = () => {
     const button = document.querySelector('header button')
     const nav = document.querySelector('header nav')
-    button.addEventListener('click', () => {
-        if (nav.classList.contains('-translate-x-full')) {
-            nav.classList.remove('-translate-x-full')
-        } else {
-            nav.classList.add('-translate-x-full')
-        }
+    const menuItems= document.querySelectorAll('header nav ul li')
 
+    const toggleMenu = ()=>{
+        nav.classList.toggle('-translate-x-full')
         button.children[0].classList.toggle('rotate-45')
         button.children[1].classList.toggle('hidden')
         button.children[2].classList.toggle('-rotate-45')
         button.children[2].classList.toggle('-mt-[6px]')
+        document.querySelector('body').classList.toggle('overflow-hidden')
+    }
+
+    menuItems.forEach(item=>{
+        item.addEventListener('click',()=>{
+            toggleMenu()
+        })
+    })
+    button.addEventListener('click', () => {
+        toggleMenu()
     })
 }
 
