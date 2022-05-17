@@ -14,10 +14,10 @@ const {services} = Astro.props
                 <label for="service"class="my-4 xl:my-0">et je suis souhaite</label>
                 <div class="px-5 py-4 mx-1 bg-loakgrey-dark rounded-xl">
                     <select required name="service" id="service">
-                        <option value="" disabled selected>Séléctionner</option>
+                        <option value="none" disabled selected>Séléctionner</option>
                     
                         {services.map(({element})=>
-                         <option value="">{element}</option>
+                         <option value={element}>{element}</option>
                         )}
                     </select>
                 </div>
