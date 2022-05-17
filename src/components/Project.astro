@@ -1,0 +1,16 @@
+---
+const {data} = Astro.props
+---
+
+<article class="relative grid mt-20 overflow-hidden text-white portfolio-item md:grid-cols-11 rounded-2xl group">
+    <figure class="col-span-11 md:col-span-7 h-80 md:h-96">
+        <img class="object-cover w-full h-full transition md:opacity-50 group-hover:opacity-100" src={data.mockup.url} alt="">
+    </figure>
+    <div class="z-20 flex flex-col col-span-11 p-10 md:col-span-4 bg-loakgrey-dark">
+        <figure>
+            <img src={data.icone.url} height={data.icone.height} width={data.icone.width} alt={data.icone.alt}>
+        </figure>
+        <p class="text-xl mt-11">{data.description}</p>
+        <a href={"/realisations/"+data.slug+"/"} class="items-center justify-between mt-auto text-2xl opacity-0 md:opacity-100 md:flex before:inset-0 before:absolute text-loakgrey">Voir le projet</a>
+    </div>
+</article>

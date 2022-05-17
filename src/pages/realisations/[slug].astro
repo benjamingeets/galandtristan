@@ -1,0 +1,44 @@
+---
+import Main from "../../layouts/Main.astro"
+import GetPortfolio from "../../queries/portfolio";
+import { Markdown } from 'astro/components';
+
+export async function getStaticPaths() {
+
+    const {allProjets} = await GetPortfolio(process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN)
+  return allProjets.map((project) => {
+    return {
+      params: { slug: project.slug},
+      props:project
+    };
+  });
+
+}
+
+const props = Astro.props
+
+---
+<Main title={props.titre}>
+    <section class="w-full max-w-[47rem]  px-4 mx-auto text-white mt-36 lg:px-0">
+        <h1 class="text-5xl ">{props.titre}</h1>
+        
+            <ul class="flex flex-col justify-between gap-4 my-16 lg:flex-row">
+                <li>
+                    <h2 class="text-3xl font-semibold ">Type de projet</h2>
+                    <span class="text-lg text-loakgrey">{props.typeDeProjet}</span>
+                </li>
+                <li>
+                    <h2 class="text-3xl font-semibold ">Rôle</h2>
+                    <span class="text-lg text-loakgrey">{props.role}</span>
+                </li>
+                <li>
+                    <h2 class="text-3xl font-semibold ">Date</h2>
+                    <span class="text-lg text-loakgrey">{props.date}</span>
+                </li>
+            </ul>
+    </section>
+    <article id="project" class="relative w-full max-w-6xl mx-auto text-white ">
+        <Markdown content={props.portfolioContenu}/>
+    </article>
+</Main>
+

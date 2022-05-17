@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family:Josephin;
+  src:url("/assets/fonts/JosefinSans-VariableFont_wght.ttf");
+  font-display:swap;
+}
+
+body {
+  background-image:url("/assets/images/dot.svg");
+  background-repeat:repeat;
+  scroll-behavior:smooth;
+  @apply bg-background font-main;
+}
+
+.hover-gradient:hover {
+  background:-webkit-linear-gradient(#72AFD3, #37ECBA);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.bg-gradient {
+  background:linear-gradient(45deg, #72AFD3 -0.03%, #37ECBA 100.03%);
+  @apply p-[2px];
+}
+
+#project p img {
+  @apply my-10 lg:my-36 xl:w-[72rem] xl:-ml-[12.5rem] max-w-full xl:max-w-[100vw] rounded-2xl;
+}
+
+#project p {
+  @apply text-lg xl:w-[47rem] mx-auto px-4 lg:px-0;
+}
+
+#project h2 {
+  @apply text-3xl mb-6 xl:w-[47rem] mx-auto px-4 lg:px-0;
+}
+
+#project h3 {
+  @apply text-2xl mb-6 xl:w-[47rem] mx-auto px-4 lg:px-0;
+}
+
+.text-gradient {
+  background:-webkit-linear-gradient(#72AFD3, #37ECBA);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+
+#contact input, select{
+  @apply  mx-1 text-lg bg-loakgrey-dark;
+}
+#contact option{
+  @apply font-sans;
+}
+#contact input{
+  @apply  w-64 px-2 py-1 border-b-2 border-white;
+}
+#contact input:focus{
+  @apply outline-none border-[#37ECBA] ;
+}
+
+#hero h1{
+  @apply text-4xl font-bold md:text-5xl;
+}
+#hero h1 strong{
+   background: -webkit-linear-gradient(#72AFD3, #37ECBA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#hero p{
+  @apply text-lg;
+}
+
+    .portfolio-item:hover div a{
+         background: -webkit-linear-gradient(#72AFD3, #37ECBA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .portfolio-item:hover div a::after{
+	    content: url("data:image/svg+xml,%3Csvg width='13' height='23' viewBox='0 0 13 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2.5L11 11.5L2 20.5' stroke='url(%23paint0_linear_2067_59236)' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_2067_59236' x1='11.0051' y1='20.5' x2='-3.40309' y2='13.2959' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2372AFD3'/%3E%3Cstop offset='1' stop-color='%2337ECBA'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+    }
+    .portfolio-item div a::after{
+        content:url("data:image/svg+xml,%3Csvg width='13' height='23' viewBox='0 0 13 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2.5L11 11.5L2 20.5' stroke='%23888787' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+
+    #whoami h2{
+      @apply text-3xl;
+  }
+  #whoami p{
+      @apply text-lg;
+  }
