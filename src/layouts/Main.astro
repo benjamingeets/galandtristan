@@ -11,7 +11,7 @@ const home = await GetHomepage(process.env.NETLIFY ? process.env.TOKEN : import.
 const token = process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN
 const social = await GetSocialLinks(token)
 const meta = await GetMeta(token);
-const {title} = Astro.props
+const {title,displayContact = true} = Astro.props
 const url = new URL(Astro.canonicalURL)
 let displayTitle = title ? title + " " + meta.globalSeo.titleSuffix : meta.globalSeo.siteName + " " + meta.globalSeo.titleSuffix
 ---
@@ -44,7 +44,9 @@ let displayTitle = title ? title + " " + meta.globalSeo.titleSuffix : meta.globa
     <Navbar icon={meta.favicon.url} currentUrl={url} socialLinks={social}/>
     <Social links={social} position="layout"/>
     <slot/>
-    <Contact  services={home.index.servicesDuFormulaire}/>
+    {displayContact &&
+        <Contact  services={home.index.servicesDuFormulaire}/>
+    }
     <Footer/>
     <script>
         import "../scripts/app.js"
