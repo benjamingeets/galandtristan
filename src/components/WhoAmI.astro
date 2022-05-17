@@ -4,7 +4,7 @@ import Button from './Button.svelte';
 const {text,image}= Astro.props
 ---
 <section class="grid justify-center w-full max-w-6xl gap-12 px-4 mx-auto lg:grid-cols-3 lg:gap-36 lg:px-0">
-    <figure>
+    <figure class="px-10 lg:px-0">
         <img class="mx-auto" src={image.url} alt="" width={image.width} height={image.height}>
     </figure>
     <div class="flex flex-col gap-6 text-white lg:col-span-2">
