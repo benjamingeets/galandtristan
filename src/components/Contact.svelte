@@ -9,9 +9,9 @@
         <form netlify action="" class="flex flex-col p-4 text-lg lg:p-12 bg-background rounded-2xl xl:gap-7">
          <h2 class="text-3xl ">Me contacter</h2>
             <div class="flex flex-col items-start xl:items-center xl:flex-row">
-                <label for="name" >Bonjour, je m'appelle</label>
+                <label for="name" class="my-4 xl:my-0">Bonjour, je m'appelle</label>
                 <input required id="name" name="name" type="text" placeholder="Nom Prenom">      
-                <label for="service" class="mt-4 xl:mt-0">et je suis souhaite</label>
+                <label for="service"class="my-4 xl:my-0">et je suis souhaite</label>
                 <div class="px-5 py-4 mx-1 bg-loakgrey-dark rounded-xl">
                     <select required name="service" id="service">
                         <option value="" disabled>Séléctionner</option>
@@ -21,8 +21,8 @@
                     </select>
                 </div>
             </div>
-            <div class="flex flex-col items-start mt-4 xl:mt-0 xl:flex-row">
-                <label for="email">Vous pouvez me recontactez à </label>
+            <div class="flex flex-col items-start xl:items-center xl:flex-row">
+                <label class="my-4 xl:my-0" for="email">Vous pouvez me recontactez à </label>
                 <input required placeholder="nom.prenom@gmail.com" type="email" name="email" id="email">
             </div>
             <div class="flex flex-col mt-4 lg:flex-row">
@@ -57,7 +57,7 @@
         @apply font-sans;
     }
     input{
-        @apply  border-b-2 border-white py-1 px-2 ;
+        @apply  border-b-2 border-white py-1 px-2  w-64;
     }
     input:focus{
         @apply outline-none border-[#37ECBA] ;
