@@ -20,6 +20,7 @@
 body{
     background-image:url("/assets/images/dot.svg");
     background-repeat: repeat;
+    scroll-behavior: smooth;
     @apply bg-background font-main;
 }
 

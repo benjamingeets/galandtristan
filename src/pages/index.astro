@@ -12,7 +12,7 @@ const {allProjets} = await GetPortfolio(process.env.NETLIFY ? process.env.TOKEN 
 <Main>
 	<Hero text={home.index.texte} hand={home.index.image}/>
 	<WhoAmI text={home.index.description} image={home.index.photoDeTristan}/>
-	<section class="w-full max-w-6xl px-4 mx-auto text-white lg:px-0">
+	<section class="w-full max-w-6xl px-4 mx-auto text-white mt-36 lg:px-0">
 		<h2 class="text-3xl text-center">Mes réalisations</h2>
 		<Project data={allProjets[0]}/>
 		<Project data={allProjets[1]}/>
