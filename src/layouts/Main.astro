@@ -1,6 +1,7 @@
 ---
 import '../style/app.css'
 import Navbar from '../components/Navbar.svelte';
+import Social from "../components/Social.svelte"
 import GetMeta from '../queries/meta';
 import GetSocialLinks from '../queries/social';
 const token = process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN
@@ -20,8 +21,9 @@ let displayTitle = title ? title + " " + meta.globalSeo.titleSuffix : meta.globa
     <link rel="icon" type="image/x-icon" href={meta.favicon.url}>
 
 </head>
-<body>
+<body class="lg:px-20">
     <Navbar client:load icon={meta.favicon.url} currentUrl={url} socialLinks={social}/>
+    <Social links={social} position="layout"/>
     <slot/>
     <script>
         import "../scripts/app.js"

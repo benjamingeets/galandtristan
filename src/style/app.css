@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities{
+
+  .text-gradient{
+    background: -webkit-linear-gradient(#72AFD3, #37ECBA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+}
 @font-face {
     font-family: Josephin;
     src: url("/assets/fonts/JosefinSans-VariableFont_wght.ttf");
@@ -14,8 +23,13 @@ body{
     @apply bg-background font-main;
 }
 
-.text-gradient{
+.hover-gradient:hover{
     background: -webkit-linear-gradient(#72AFD3, #37ECBA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient{
+  background: linear-gradient(45deg, #72AFD3 -0.03%, #37ECBA 100.03%);
+  @apply p-[2px];
 }
