@@ -37,7 +37,7 @@ import Social from "./Social.svelte";
         <div class={"h-[2px] bg-white w-6 transition"}></div>
         <span class="sr-only">Menu</span>
     </button>
-    <nav class={"fixed flex flex-col items-center justify-center  md:relative top-0 pt-3 md:pt-0 left-0 md:translate-x-0 w-screen h-screen bg-black md:bg-transparent bg-opacity-80 z-40 md:w-auto md:h-auto transition -translate-x-full"}>
+    <nav class={"fixed flex flex-col items-center justify-center  md:relative top-0 pt-3 md:pt-0 left-0 md:translate-x-0 w-screen h-screen bg-black md:bg-transparent bg-opacity-90 z-40 md:w-auto md:h-auto transition -translate-x-full"}>
         <ul class="flex flex-col items-center md:flex-row gap-14 mb-14 lg:mb-0">
             {#each links as link}
 
@@ -49,7 +49,7 @@ import Social from "./Social.svelte";
                         </span>
                     </Button>
                 {:else}
-                    <a href={link.href} class={"transition text-3xl md:text-lg rounded hover:bg-loakgrey-dark px-5 py-2" + " " + (currentUrl.pathname.split('/')[1] == link.href.split('/')[1] ? "text-gradient": null)}>{link.label}</a>
+                    <a href={link.href} class={"transition text-3xl md:text-lg rounded hover:bg-loakgrey-dark px-5 py-2" + " " + (currentUrl.pathname.split('/')[1] == link.href.split('/')[1] ? "text-gradient font-bold": null)}>{link.label}</a>
                 {/if}
             </li>
             {/each}
