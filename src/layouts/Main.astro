@@ -1,5 +1,4 @@
 ---
-import '../style/app.css'
 import Navbar from '../components/Navbar.svelte';
 import Footer from "../components/Footer.svelte"
 import Social from "../components/Social.svelte"
@@ -7,6 +6,8 @@ import GetMeta from '../queries/meta';
 import GetSocialLinks from '../queries/social';
 import GetHomepage from "../queries/homepage"
 import Contact from '../components/Contact.svelte';
+
+import '../style/app.css'
 const home = await GetHomepage(process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN)
 const token = process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN
 const social = await GetSocialLinks(token)

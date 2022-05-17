@@ -2,49 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
+@font-face {
+  font-family: Josephin;
+  src: url("/assets/fonts/JosefinSans-VariableFont_wght.ttf");
+  font-display: swap;
+}
 
-  .text-gradient{
-    background: -webkit-linear-gradient(#72AFD3, #37ECBA);
+body {
+  background-image: url("/assets/images/dot.svg");
+  background-repeat: repeat;
+  scroll-behavior: smooth;
+  @apply bg-background font-main;
+}
+
+.hover-gradient:hover {
+  background: -webkit-linear-gradient(#72AFD3, #37ECBA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-}
-@font-face {
-    font-family: Josephin;
-    src: url("/assets/fonts/JosefinSans-VariableFont_wght.ttf");
-    font-display: swap;
-}
-
-body{
-    background-image:url("/assets/images/dot.svg");
-    background-repeat: repeat;
-    scroll-behavior: smooth;
-    @apply bg-background font-main;
-}
-
-.hover-gradient:hover{
-    background: -webkit-linear-gradient(#72AFD3, #37ECBA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.bg-gradient{
+.bg-gradient {
   background: linear-gradient(45deg, #72AFD3 -0.03%, #37ECBA 100.03%);
   @apply p-[2px];
 }
 
-#project p img{
-  @apply my-10 lg:my-36 xl:w-[72rem] xl:-ml-[12.5rem] max-w-full  xl:max-w-[100vw] rounded-2xl;
-}
-#project p {
-  @apply text-lg xl:w-[47rem] mx-auto px-4 lg:px-0;
-} 
-#project h2{
-  @apply text-3xl mb-6 xl:w-[47rem] mx-auto px-4 lg:px-0;
+#project p img {
+  @apply my-10 lg: my-36 xl:w-[72rem] xl:-ml-[12.5rem] max-w-full xl:max-w-[100vw] rounded-2xl;
 }
 
-#project h3{
-  @apply text-2xl mb-6 xl:w-[47rem] mx-auto px-4 lg:px-0;
+#project p {
+  @apply text-lg xl: w-[47rem] mx-auto px-4 lg:px-0;
+}
+
+#project h2 {
+  @apply text-3xl mb-6 xl: w-[47rem] mx-auto px-4 lg:px-0;
+}
+
+#project h3 {
+  @apply text-2xl mb-6 xl: w-[47rem] mx-auto px-4 lg:px-0;
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(#72AFD3, #37ECBA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
