@@ -23,13 +23,28 @@ let displayTitle = title ? title + " " + meta.globalSeo.titleSuffix : meta.globa
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{displayTitle}</title>
     <link rel="icon" type="image/x-icon" href={meta.favicon.url}>
+   <meta name="description" content={meta.globalSeo.fallbackSeo.description}>
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={url.href}>
+    <meta property="og:title" content={displayTitle}>
+    <meta property="og:description" content={meta.globalSeo.fallbackSeo.description}>
+    <meta property="og:image" content={meta.globalSeo.fallbackSeo.image.url}>
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content={url.href}>
+    <meta property="twitter:title" content={displayTitle}>
+    <meta property="twitter:description" content={meta.globalSeo.fallbackSeo.description}>
+     <meta property="twitter:image" content={meta.globalSeo.fallbackSeo.image.url}>
+    <script async defer src="https://nullitics.com/script.js"></script>
 </head>
-<body class="lg:px-20">
-    <Navbar client:load icon={meta.favicon.url} currentUrl={url} socialLinks={social}/>
+<body class="lg:px-20 md:overflow-auto">
+    <Navbar icon={meta.favicon.url} currentUrl={url} socialLinks={social}/>
     <Social links={social} position="layout"/>
     <slot/>
-    <Contact  services={home.index.servicesDuFormulaire}//>
+    <Contact  services={home.index.servicesDuFormulaire}/>
     <Footer/>
     <script>
         import "../scripts/app.js"

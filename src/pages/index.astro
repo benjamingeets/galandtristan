@@ -6,16 +6,18 @@ import Main from "../layouts/Main.astro"
 import Skills from "../components/Skills.svelte"
 import GetHomepage from "../queries/homepage"
 import GetPortfolio from "../queries/portfolio";
+import Button from "../components/Button.svelte";
 const home = await GetHomepage(process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN)
 const {allProjets} = await GetPortfolio(process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN)
 ---
 <Main>
 	<Hero text={home.index.texte} hand={home.index.image}/>
 	<WhoAmI text={home.index.description} image={home.index.photoDeTristan}/>
-	<section class="w-full max-w-6xl px-4 mx-auto text-white mt-36 lg:px-0">
+	<section class="flex flex-col items-center w-full max-w-6xl px-4 mx-auto text-white mt-36 lg:px-0">
 		<h2 class="text-3xl text-center">Mes réalisations</h2>
 		<Project data={allProjets[0]}/>
 		<Project data={allProjets[1]}/>
+		<Button href="/realisations/" className={"mx-auto mt-20 inline-block"}>Voir toutes mes réalisations</Button>
 	</section>
 	<Skills client:load skills={home.index.services}/>
 </Main>

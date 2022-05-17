@@ -24,6 +24,14 @@ import Social from "./Social.svelte";
     ];
     let displayNav = false
     const toggleNav = () =>{
+        if(displayNav){
+
+            document.querySelector('body').classList.remove('overflow-hidden')
+        }else{
+            window.scrollTo(0,0)
+            
+            document.querySelector('body').classList.add('overflow-hidden')
+        }
         displayNav=!displayNav;
     }
 </script>
@@ -35,13 +43,13 @@ import Social from "./Social.svelte";
             <a href="/" class="before:absolute before:inset-0">Galand Tristan</a>
         </figcaption>
     </figure>
-    <button on:click={toggleNav} class="relative z-30 flex flex-col justify-center gap-1 md:hidden">
-        <div class={"h-[2px] bg-white w-6 transition" + " " + (displayNav ? 'rotate-45':'')}></div>
-        <div class={"h-[2px] bg-white w-6 transition" + " " + (displayNav ? 'hidden':'')}></div>
-        <div class={"h-[2px] bg-white w-6 transition" + " " + (displayNav ? '-rotate-45 -mt-[6px]':'')}></div>
+    <button on:click={toggleNav} class="relative z-50 flex flex-col justify-center gap-1 md:hidden">
+        <div class={"h-[2px] bg-white w-6 transition"}></div>
+        <div class={"h-[2px] bg-white w-6 transition"}></div>
+        <div class={"h-[2px] bg-white w-6 transition"}></div>
         <span class="sr-only">Menu</span>
     </button>
-    <nav class={"absolute flex flex-col items-center justify-center  md:relative top-0 pt-3 md:pt-0 left-0 md:translate-x-0 w-screen h-screen bg-black md:bg-transparent bg-opacity-80 z-20 md:w-auto md:h-auto transition " + " " + (displayNav ? '':' -translate-x-full ')}>
+    <nav class={"fixed flex flex-col items-center justify-center  md:relative top-0 pt-3 md:pt-0 left-0 md:translate-x-0 w-screen h-screen bg-black md:bg-transparent bg-opacity-80 z-40 md:w-auto md:h-auto transition -translate-x-full"}>
         <ul class="flex flex-col items-center md:flex-row gap-14 mb-14 lg:mb-0">
             {#each links as link}
                 {#if link.button}
@@ -52,7 +60,7 @@ import Social from "./Social.svelte";
                     </Button>
                 {:else}
                 <li>
-                    <a on:click={toggleNav} href={link.href} class={"transition text-3xl md:text-lg rounded hover:bg-loakgrey-dark px-5 py-2" + " " + (currentUrl.pathname == link.href ? "text-gradient": null)}>{link.label}</a>
+                    <a on:click={toggleNav} href={link.href} class={"transition text-3xl md:text-lg rounded hover:bg-loakgrey-dark px-5 py-2" + " " + (currentUrl.pathname.split('/')[1] == link.href.split('/')[1] ? "text-gradient": null)}>{link.label}</a>
                 </li>
                 {/if}
             {/each}

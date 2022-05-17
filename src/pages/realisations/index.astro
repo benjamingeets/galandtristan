@@ -1,4 +1,13 @@
 ---
 import Main from "../../layouts/Main.astro"
+import GetPortfolio from "../../queries/portfolio";
+import Project from "../../components/Project.astro";
+const {allProjets} = await GetPortfolio(process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN)
 ---
-<Main></Main>
+<Main title="Réalisations">
+    <main class="max-w-6xl px-4 mx-auto lg:px-0">
+    {allProjets.map((projet)=>
+        <Project data={projet}/>
+    )}
+    </main>
+</Main>

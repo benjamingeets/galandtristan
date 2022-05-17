@@ -16,5 +16,8 @@
     "postcss": "^8.4.13",
     "svelte": "^3.46.4",
     "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "unpoly": "^2.6.0"
   }
 }
