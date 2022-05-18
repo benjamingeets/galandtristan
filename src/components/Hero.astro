@@ -1,10 +1,11 @@
 ---
     import { Markdown } from 'astro/components';
 const {text,hand}= Astro.props
+console.log(hand)
 ---
 <section id="hero" class="w-full max-w-4xl mx-auto text-white min-h-[80vh] flex justify-center flex-col gap-7 px-4 lg:px-0">
     <figure>
-        <img src={hand.url} alt="">
+        <img src={hand.url} alt="" height={hand.height} width={hand.width}>
     </figure>
     <Markdown content={text}/>
 </section>
