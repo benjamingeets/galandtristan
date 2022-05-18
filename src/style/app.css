@@ -54,7 +54,7 @@ body {
 
 
 #contact input, select{
-  @apply  mx-1 text-lg bg-loakgrey-dark;
+  @apply  mx-1 text-lg bg-loakgrey-dark focus:outline-none;
 }
 #contact option{
   @apply font-sans;
