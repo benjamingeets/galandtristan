@@ -1,4 +1,5 @@
 import unpoly from 'unpoly'
+import { animate,stagger } from "motion"
 up.link.config.followSelectors.push('a[href]')
 up.form.config.submitSelectors.push(['form'])
 up.link.config.instantSelectors.push('a[href]')
@@ -8,6 +9,16 @@ up.compiler('body', () => {
     sendFrom()
     toggleNav()
     setSkill()
+})
+
+up.compiler('#hero', () => {
+    animate(
+        "#hero figure img",
+        {
+          rotate:[0,-10,10,0]
+        },
+        { duration:0.8, easing:"ease-in-out" }
+      )
 })
 
 const setSkill = () => {
