@@ -2,9 +2,9 @@
 const {data} = Astro.props
 ---
 
-<article class="relative grid mt-20 overflow-hidden text-white portfolio-item md:grid-cols-11 rounded-2xl group">
+<article class="relative grid mt-20 overflow-hidden text-white portfolio-item md:grid-cols-11 rounded-2xl transition border-transparent group border-2 hover:border-[#37ECBA] ">
     <figure class="col-span-11 md:col-span-7 h-80 md:h-96">
-        <img class="object-cover w-full h-full transition md:opacity-50 group-hover:opacity-100" src={data.mockup.url} alt="">
+        <img class="object-cover w-full h-full transition" src={data.mockup.url} alt="">
     </figure>
     <div class="z-20 flex flex-col col-span-11 p-10 md:col-span-4 bg-loakgrey-dark">
         <figure>
