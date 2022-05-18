@@ -17,6 +17,7 @@
     "tailwindcss": "^3.0.24"
   },
   "dependencies": {
+    "motion": "^10.8.2",
     "unpoly": "^2.6.0"
   }
 }
