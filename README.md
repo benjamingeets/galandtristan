@@ -1,43 +1,9 @@
-# Astro Starter Kit: Minimal
+# Portfolio de Galand Tristan
 
-```
-npm init astro -- --template minimal
-```
+Portfolio développé avec Astro/Tailwind, server-side generated.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+Le contenu est géré via DatoCMS, un CMS headless. 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Les requêtes sont en GraphQL.
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command           | Action                                       |
-|:----------------  |:-------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://github.com/withastro/astro) or jump into our [Discord server](https://astro.build/chat).
+<img width="1552" alt="Screenshot 2022-06-11 at 18 34 42" src="https://user-images.githubusercontent.com/45077541/173196699-4de57082-57ef-4238-a70b-c7a38973ca6a.png">
