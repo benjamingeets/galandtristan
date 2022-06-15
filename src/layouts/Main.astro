@@ -12,19 +12,21 @@ const home = await GetHomepage(process.env.NETLIFY ? process.env.TOKEN : import.
 const token = process.env.NETLIFY ? process.env.TOKEN : import.meta.env.TOKEN
 const social = await GetSocialLinks(token)
 const meta = await GetMeta(token);
-const {title,displayContact = true} = Astro.props
+const { title, displayContact = true } = Astro.props
 const url = new URL(Astro.canonicalURL)
 let displayTitle = title ? title + " " + meta.globalSeo.titleSuffix : meta.globalSeo.siteName + " " + meta.globalSeo.titleSuffix
 ---
+
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{displayTitle}</title>
     <link rel="icon" type="image/x-icon" href={meta.favicon.url}>
-   <meta name="description" content={meta.globalSeo.fallbackSeo.description}>
+    <meta name="description" content={meta.globalSeo.fallbackSeo.description}>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -38,19 +40,22 @@ let displayTitle = title ? title + " " + meta.globalSeo.titleSuffix : meta.globa
     <meta property="twitter:url" content={url.href}>
     <meta property="twitter:title" content={displayTitle}>
     <meta property="twitter:description" content={meta.globalSeo.fallbackSeo.description}>
-     <meta property="twitter:image" content={meta.globalSeo.fallbackSeo.image.url}>
-    <script async defer src="https://nullitics.com/script.js"></script>
+    <meta property="twitter:image" content={meta.globalSeo.fallbackSeo.image.url}>
+    <script defer data-domain="galandtristan.be" src="https://plausible.io/js/plausible.js"></script>
+
 </head>
+
 <body class="lg:px-20 md:overflow-auto">
-    <Navbar icon={meta.favicon.url} currentUrl={url} socialLinks={social}/>
-    <Social links={social} position="layout"/>
-    <slot/>
+    <Navbar icon={meta.favicon.url} currentUrl={url} socialLinks={social} />
+    <Social links={social} position="layout" />
+    <slot />
     {displayContact &&
-        <Contact  services={home.index.servicesDuFormulaire}/>
+    <Contact services={home.index.servicesDuFormulaire} />
     }
-    <Footer/>
+    <Footer />
     <script>
         import "../scripts/app.js"
     </script>
 </body>
+
 </html>
